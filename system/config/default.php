@@ -74,8 +74,8 @@ $GLOBALS['TL_CONFIG']['websitePath']    = null;
  * See PHP function date() for more information.
  */
 $GLOBALS['TL_CONFIG']['timeZone']    = 'GMT';
-$GLOBALS['TL_CONFIG']['datimFormat'] = 'Y-m-d H:i';
-$GLOBALS['TL_CONFIG']['dateFormat']  = 'Y-m-d';
+$GLOBALS['TL_CONFIG']['datimFormat'] = 'd.m.Y H:i';
+$GLOBALS['TL_CONFIG']['dateFormat']  = 'd.m.Y';
 $GLOBALS['TL_CONFIG']['timeFormat']  = 'H:i';
 
 
@@ -342,3 +342,5 @@ $GLOBALS['TL_CONFIG']['bypassCache']          = false;
 $GLOBALS['TL_CONFIG']['loadGoogleFonts']      = false;
 $GLOBALS['TL_CONFIG']['defaultFileChmod']     = 0644;
 $GLOBALS['TL_CONFIG']['defaultFolderChmod']   = 0755;
+
+require_once 'localconfig.php';

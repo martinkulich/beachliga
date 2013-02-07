@@ -1,0 +1,4 @@
+cache/*
+system/config/localconfig.php
+.htaccess
+.idea/*

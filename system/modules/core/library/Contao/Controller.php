@@ -2375,7 +2375,7 @@ abstract class Controller extends \System
 
 		if (!$GLOBALS['TL_CONFIG']['bypassCache'] && file_exists($strCacheFile))
 		{
-			include $strCacheFile;
+            include $strCacheFile;
 		}
 		else
 		{
