@@ -149,12 +149,3 @@ $GLOBALS['TL_DCA']['club'] = array
 	)
 );
 
-class club extends Backend
-{
-
-    public function retrieveById($clubId)
-    {
-        return  $this->Database->prepare("SELECT * FROM club WHERE id = ?")->limit(1)->executeUncached($clubId);
-    }
-}
-

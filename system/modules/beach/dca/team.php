@@ -2,10 +2,6 @@
 //require dirname(__FILE__).'/../../modules/record_lookup/RecordLookup.php';
 //require dirname(__FILE__).'/../../modules/record_lookup/RecordLookupDataContainer.php';
 
-$this->loadDataContainer('club');
-$this->loadDataContainer('player');
-
-
 /**
  * Table team
  */
@@ -75,7 +71,7 @@ $GLOBALS['TL_DCA']['team'] = array
     // Palettes
     'palettes' => array
     (
-        'default' => 'club; player, coplayer; rank',
+        'default' => 'league; club; player, coplayer; rank',
     ),
 
 
@@ -104,6 +100,17 @@ $GLOBALS['TL_DCA']['team'] = array
             'label' => &$GLOBALS['TL_LANG']['team']['club'],
             'inputType' => 'select',
             'foreignKey' => 'club.name',
+            'eval' => array('mandatory' => true, 'chosen' => true, 'doNotCopy' => true, 'includeBlankOption' => true),
+            'sql' => "int(10) unsigned NOT NULL default '0'",
+            'relation' => array('type' => 'belongsTo', 'load' => 'eager'),
+            'sorting'=>true,
+            'filter'=>true,
+        ),
+        'league' => array
+        (
+            'label' => &$GLOBALS['TL_LANG']['team']['league'],
+            'inputType' => 'select',
+            'foreignKey' => 'league.name',
             'eval' => array('mandatory' => true, 'chosen' => true, 'doNotCopy' => true, 'includeBlankOption' => true),
             'sql' => "int(10) unsigned NOT NULL default '0'",
             'relation' => array('type' => 'belongsTo', 'load' => 'eager'),
@@ -145,11 +152,9 @@ class team extends Backend
 {
     public function listTeams($row)
     {
-        $clubClass = new club();
-        $club = $clubClass->retrieveById($row['club']);
-        $playerClass = new player();
-        $player = $playerClass->retrieveById($row['player']);
-        $coplayer = $playerClass->retrieveById($row['coplayer']);
+        $club = ClubModel::findByPk($row['club']);
+        $player = PlayerModel::findByPk($row['player']);
+        $coplayer = PlayerModel::findByPk($row['coplayer']);
         switch($row['rank'])
         {
             case 0:

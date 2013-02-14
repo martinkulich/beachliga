@@ -1,0 +1,9 @@
+<!-- indexer::stop -->
+<div class="next_tournament">
+    <?php if($this->tournaments) {?>
+        <?php foreach($this->tournaments as $tournament){ ?>
+            <?php echo $tournament->date ?>
+        <?php }?>
+    <?php }?>
+</div>
+<!-- indexer::continue -->

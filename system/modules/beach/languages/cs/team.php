@@ -10,6 +10,8 @@ $GLOBALS['TL_LANG']['team']['coplayer'][0] = 'Hráč 2';
 $GLOBALS['TL_LANG']['team']['coplayer'][1] = 'Prosím zadejte jméno hráče č. 2.';
 $GLOBALS['TL_LANG']['team']['rank'][0] = 'Bodové hodonocení';
 $GLOBALS['TL_LANG']['team']['rank'][1] = 'Prosím zadejte bodové hodnocení.';
+$GLOBALS['TL_LANG']['team']['league'][0] = 'Soutěž';
+$GLOBALS['TL_LANG']['team']['league'][1] = 'Prosím zadejte jaké soutěže se tým účastní.';
 
 
 

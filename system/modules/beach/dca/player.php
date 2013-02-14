@@ -99,26 +99,4 @@ $GLOBALS['TL_DCA']['player'] = array
 	)
 );
 
-class player extends Backend
-{
-
-    public function getPlayers()
-    {
-        $result = $this->Database->prepare("SELECT * FROM player")->execute();
-        $players = array();
-        while($result->next())
-        {
-            $players[$result->id] = $result->lastname.' '.$result->firstname;
-        }
-
-        return $players;
-    }
-
-    public function retrieveById($clubId)
-    {
-        return  $this->Database->prepare("SELECT * FROM player WHERE id = ?")->limit(1)->executeUncached($clubId);
-    }
-
-}
-
 

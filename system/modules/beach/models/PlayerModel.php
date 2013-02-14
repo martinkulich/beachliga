@@ -1,10 +1,11 @@
 <?php
 
+
 /**
  * Contao Open Source CMS
- *
+ * 
  * Copyright (C) 2005-2013 Leo Feyer
- *
+ * 
  * @package Comments
  * @link    https://contao.org
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
@@ -16,17 +17,19 @@
  */
 namespace Contao;
 
-class LeagueModel extends Model
+
+class PlayerModel extends Model
 {
 
-    /**
-     * Table name
-     * @var string
-     */
-    protected static $strTable = 'league';
+	/**
+	 * Table name
+	 * @var string
+	 */
+	protected static $strTable = 'player';
 
-    public function getTeams()
+    public function __toString()
     {
-        return \TeamModel::findBy('league', $this->id, array('order' => 'rank DESC'));
+        return $this->lastname.' '.$this->firstname;
     }
+
 }

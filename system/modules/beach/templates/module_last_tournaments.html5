@@ -1,0 +1,16 @@
+<!-- indexer::stop -->
+<div class="last_tournaments">
+    <table>
+        <?php foreach($this->tournaments as $tournament){?>
+            <tr>
+                <td>
+                    <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>
+                </td>
+                <td>
+                    <?php echo $tournament->getRelated('club')->name ?>
+                </td>
+            </tr>
+        <?php } ?>
+    </table>
+</div>
+<!-- indexer::continue -->

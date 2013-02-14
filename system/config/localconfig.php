@@ -23,4 +23,5 @@ $GLOBALS['TL_CONFIG']['forceImprovedTheme'] = false;
 $GLOBALS['TL_CONFIG']['inactiveModules'] = '';
 $GLOBALS['TL_CONFIG']['repository_unsafe_catalog'] = true;
 $GLOBALS['TL_CONFIG']['latestVersion'] = '3.0.3';
+$GLOBALS['TL_CONFIG']['templateFiles'] = 'tpl,html5,xhtml,html';
 ### INSTALL SCRIPT STOP ###

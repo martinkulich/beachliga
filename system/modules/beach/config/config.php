@@ -20,7 +20,13 @@
 /**
  * Front end modules
  */
-//$GLOBALS['FE_MOD']['application']['comments'] = 'ModuleComments';
+$GLOBALS['FE_MOD']['beach'] = array(
+    'next_tournament' => 'ModuleNextTournament',
+    'tournament_results' => 'ModuleTournamentResults',
+    'league_ranking' => 'ModuleLeagueRanking',
+    'last_tournaments' => 'ModuleLastTournaments',
+    'tournament_detail' => 'ModuleTournamentDetail',
+);
 
 
 /**

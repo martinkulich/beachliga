@@ -1,0 +1,42 @@
+<!-- indexer::stop -->
+<div class="tournament_results">
+    <?php if($this->tournament->hasResults()) {?>
+    <table>
+        <thead>
+        <tr>
+            <th class='rank'>
+                Počet bodů
+            </th>
+            <th class='player'>
+                Hráč 1
+            </th>
+            <th class='coplayer'>
+                Hráč 2
+            </th>
+            <th class='club'>
+                Klub
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($this->teams as $team) {?>
+        <tr>
+            <td>
+                <?php echo $team->rank?>
+            </td>
+            <td>
+                <?php echo $team->getRelated('player'); ?>
+            </td>
+            <td>
+                <?php echo $team->getRelated('coplayer'); ?>
+            </td>
+            <td>
+                <?php echo $team->getRelated('club')->name?>
+            </td>
+        </tr>
+        <?php }?>
+        </tbody>
+    </table>
+    <?php }?>
+</div>
+<!-- indexer::continue -->

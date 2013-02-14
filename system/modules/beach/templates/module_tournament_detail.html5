@@ -1,0 +1,82 @@
+<div class="tournament_detail">
+    <h1>
+        <?php echo $this->tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']).' '.$this->tournamentClub->name
+        ?>
+    </h1>
+
+    <?php if(count($this->tournamentTeams)) { ?>
+    <?php if($this->showResults) { ?>
+    <div class="tournament_results">
+        <table>
+            <thead>
+            <tr>
+                <th class='rank'>
+                    Počet bodů
+                </th>
+                <th class='player'>
+                    Hráč 1
+                </th>
+                <th class='coplayer'>
+                    Hráč 2
+                </th>
+                <th class='club'>
+                    Klub
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($this->tournamentTeams as $team) {?>
+            <tr>
+                <td>
+                    <?php echo $team->rank?>
+                </td>
+                <td>
+                    <?php echo $team->getRelated('player'); ?>
+                </td>
+                <td>
+                    <?php echo $team->getRelated('coplayer'); ?>
+                </td>
+                <td>
+                    <?php echo $team->getRelated('club')->name?>
+                </td>
+            </tr>
+            <?php }?>
+            </tbody>
+        </table>
+    </div>
+    <?php }else{?>
+    <div class="tournament_teams">
+        <table>
+            <thead>
+            <tr>
+                <th class='player'>
+                    Hráč 1
+                </th>
+                <th class='coplayer'>
+                    Hráč 2
+                </th>
+                <th class='club'>
+                    Klub
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($this->tournamentTeams as $team) {?>
+            <tr>
+                <td>
+                    <?php echo $team->getRelated('player'); ?>
+                </td>
+                <td>
+                    <?php echo $team->getRelated('coplayer'); ?>
+                </td>
+                <td>
+                    <?php echo $team->getRelated('club')->name?>
+                </td>
+            </tr>
+            <?php }?>
+            </tbody>
+        </table>
+    </div>
+    <?php }?>
+    <?php }?>
+</div>

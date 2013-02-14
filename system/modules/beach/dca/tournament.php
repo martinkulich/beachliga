@@ -84,6 +84,16 @@ $GLOBALS['TL_DCA']['tournament'] = array
         (
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
+        'teams' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tournament']['teams'],
+            'exclude'                 => true,
+            'inputType'               => 'checkbox',
+            'foreignKey'              => 'team.id',
+            'eval'                    => array('mandatory'=>false, 'multiple'=>true),
+            'sql'                     => "blob NULL",
+            'relation'                => array('type'=>'hasMany', 'load'=>'lazy')
+        ),
         'date' => array
         (
             'label' => &$GLOBALS['TL_LANG']['tournament']['date'],
@@ -130,8 +140,9 @@ class tournament extends Backend
     public function formatDate($row, $label)
     {
         $date = date('d.m.Y',$row['date']);
-        $clubClass = new club();
-        $club = $clubClass->retrieveById($row['club']);
+
+        $club = ClubModel::findByPk($row['club']);
+
         return sprintf('%s %s', $date, $club->name);
     }
 
