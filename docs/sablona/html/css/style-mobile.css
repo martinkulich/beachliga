@@ -1,0 +1,271 @@
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body
+	{
+		line-height: 1.35em;
+		font-size: 10pt;
+		letter-spacing: 0;
+		color: #ccc;
+	}
+
+	h2
+	{
+		font-size: 1.2em;
+	}
+	
+	h3, h4, h6
+	{
+		font-size: 1em;
+	}
+
+	section,
+	article
+	{
+		clear: both;
+	}
+
+	.image
+	{
+		display: block;
+		width: 100%;
+		margin: 0 0 1.5em 0;
+	}
+
+		.image img
+		{
+			display: block;
+			width: 100%;
+		}
+
+	.image-left
+	{
+		width: 30%;
+		margin: 0 2em 0.75em 0;
+	}
+
+	.box
+	{
+		padding: 2em 10px 2em 10px;
+		margin: 0 0 10px 0;
+	}
+
+	.button,
+	.bigbutton
+	{
+		width: 100%;
+		text-align: center;
+		padding: 0.75em 0 0.75em 0;
+		font-size: 1.2em;
+	}
+
+/*********************************************************************************/
+/* Mobile UI                                                                     */
+/*********************************************************************************/
+
+	#mobileUI-site-titlebar
+	{
+		background: #272f33;
+		background: rgba(39, 47, 51, 0.975);
+	}
+
+	#mobileUI-site-title
+	{
+		color: #fff;
+		font-size: 1.2em;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: -0.05em;
+		line-height: 44px;
+	}
+
+	#mobileUI-site-nav-opener
+	{
+		text-indent: -9999em;
+		background: url('images/mobileUI-site-nav-opener-bg.svg') 8px 15px no-repeat;
+		width: 44px;
+		height: 44px;
+		opacity: 0.2;
+	}
+
+		#mobileUI-site-nav-opener:active
+		{
+			opacity: 0.75;
+		}
+
+	#mobileUI-site-nav
+	{
+		background: #131c21;
+		box-shadow: inset -4px 0px 5px 0px rgba(0,0,0,0.2);
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.9em;
+	}
+
+		#mobileUI-site-nav-inner
+		{
+		}
+
+			.mobileUI-site-nav-link
+			{
+				display: block;
+				color: #fff;
+				text-decoration: none;
+				height: 44px;
+				line-height: 44px;
+				border-top: solid 1px rgba(255,255,255,0.035);
+				padding: 0 1em 0 1em;
+			}
+			
+			.mobileUI-site-nav-link:first-child
+			{
+				border-top: 0;
+			}
+			
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	#header-wrapper
+	{
+		position: relative;
+		height: 140px;
+		background-size: auto 180px;
+		background-position: bottom center;
+		display: none;
+	}
+	
+	.homepage #header-wrapper
+	{
+		display: block;
+		margin-top: -1%;
+	}
+	
+	#banner-wrapper
+	{
+	}
+	
+	#main-wrapper
+	{
+		padding: 10px;
+	}
+	
+	#footer-wrapper
+	{
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+		display: none;
+	}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		background: rgba(0,0,0,0.6);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 12px 20px 12px 20px;
+		text-align: center;
+	}
+	
+		#banner h2
+		{
+			margin: 0 0 0.025em 0;
+		}
+		
+		#banner p
+		{
+			margin: 0;
+		}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+	#content
+	{
+		margin: 0 0 10px 0;
+	}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+	}
+
+/*********************************************************************************/
+/* Sidebar 1                                                                     */
+/*********************************************************************************/
+
+	#sidebar1
+	{
+		margin: 0 0 10px 0;
+	}
+
+/*********************************************************************************/
+/* Sidebar 2                                                                     */
+/*********************************************************************************/
+
+	#sidebar2
+	{
+		margin: 0 0 10px 0;
+	}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar
+	{
+	}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+	}
+
+		#footer section
+		{
+			padding: 2em 20px 2em 20px;
+			border-top: solid 1px #1e272b;
+		}
+
+		#footer section:first-of-type
+		{
+			border-top: 0;
+		}
+	
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		padding: 2em 20px 2em 20px;
+	}
