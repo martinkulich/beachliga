@@ -1,4 +1,8 @@
-cache/*
+assets/css/*
+assets/js/*
+system/cache/*
+system/logs/*
+system/tmp/*
 system/config/localconfig.php
 .htaccess
 .idea/*
