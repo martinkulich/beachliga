@@ -41,7 +41,6 @@ class ModuleTournamentResults extends Module
     protected function compile()
     {
         $tournamentId = \Input::get('id');
-        $tournamentId = 1;
         $this->Template->tournament = TournamentModel::findByPk($tournamentId);
         if($this->Template->tournament)
         {

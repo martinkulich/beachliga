@@ -8,6 +8,15 @@ $GLOBALS['TL_LANG']['tournament']['start_at'][0] = 'Začátek turnaje';
 $GLOBALS['TL_LANG']['tournament']['start_at'][1] = 'Prosím zadejte čas začátku turnaje.';
 $GLOBALS['TL_LANG']['tournament']['descrip'][0] = 'Info';
 $GLOBALS['TL_LANG']['tournament']['descrip'][1] = 'Prosím zadejte doplňující informace k turnaji.';
+$GLOBALS['TL_LANG']['tournament']['perex'][0] = 'Krátké info';
+$GLOBALS['TL_LANG']['tournament']['perex'][1] = 'Prosím zadejte krátké info k turnaji.';
+$GLOBALS['TL_LANG']['tournament']['summary'][0] = 'Zhodnocení';
+$GLOBALS['TL_LANG']['tournament']['summary'][1] = 'Prosím zadejte krátké zhodnocení turnaje.';
+$GLOBALS['TL_LANG']['tournament']['gallery'][0] = 'Galerie';
+$GLOBALS['TL_LANG']['tournament']['gallery'][1] = 'Prosím vyberte fotografie z turnaje.';
+$GLOBALS['TL_LANG']['tournament']['preview'][0] = 'Náhled';
+$GLOBALS['TL_LANG']['tournament']['preview'][1] = 'Prosím vyberte fotografii náhledu turnaje.';
+
 
 
 

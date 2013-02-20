@@ -39,7 +39,7 @@ class ModuleNextTournament extends Module
      */
     protected function compile()
     {
-        $this->Template->nextTournament = TournamentModel::findNextTournament();
+        $this->Template->tournament = TournamentModel::findNextTournament();
 
     }
 }

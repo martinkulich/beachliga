@@ -155,6 +155,7 @@ class team extends Backend
         $club = ClubModel::findByPk($row['club']);
         $player = PlayerModel::findByPk($row['player']);
         $coplayer = PlayerModel::findByPk($row['coplayer']);
+        $league =   LeagueModel::findByPk($row['league']);
         switch($row['rank'])
         {
             case 0:
@@ -175,7 +176,7 @@ class team extends Backend
         return sprintf("
             <table>
                 <tr>
-                    <td width='70px'>
+                    <td width='60px'>
                         %s
                     </td>
                     <td width='150px'>
@@ -184,7 +185,10 @@ class team extends Backend
                     <td width='150px'>
                         %s %s
                     </td>
-                    <td width='150px'>
+                    <td width='100px'>
+                        %s
+                    </td>
+                    <td width='100px'>
                         %s
                     </td>
                  </tr>
@@ -194,7 +198,8 @@ class team extends Backend
             $player->firstname,
             $coplayer->lastname,
             $coplayer->firstname,
-            $club->name
+            $club->name,
+            $league->name
         );
     }
 

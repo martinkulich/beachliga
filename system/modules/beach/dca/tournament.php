@@ -69,7 +69,7 @@ $GLOBALS['TL_DCA']['tournament'] = array
     // Palettes
     'palettes' => array
     (
-        'default' => 'date, start_at; club; descrip, gallery',
+        'default' => 'date, start_at; club; perex, descrip; summary; gallery, preview',
     ),
 
 
@@ -117,6 +117,20 @@ $GLOBALS['TL_DCA']['tournament'] = array
             'sql' => "int(10) unsigned NOT NULL default '0'",
             'relation' => array('type' => 'belongsTo', 'load' => 'eager')
         ),
+        'perex' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tournament']['perex'],
+            'inputType'               => 'textarea',
+            'eval'                    => array('mandatory'=>false),
+            'sql'                     => "text NOT NULL default ''"
+        ),
+        'summary' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tournament']['summary'],
+            'inputType'               => 'textarea',
+            'eval'                    => array('mandatory'=>false),
+            'sql'                     => "text NOT NULL default ''"
+        ),
         'descrip' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tournament']['descrip'],
@@ -126,12 +140,21 @@ $GLOBALS['TL_DCA']['tournament'] = array
         ),
         'gallery' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_content']['gallery'],
+            'label'                   => &$GLOBALS['TL_LANG']['tournament']['gallery'],
             'exclude'                 => true,
             'inputType'               => 'fileTree',
             'eval'                    => array('multiple'=>true, 'fieldType'=>'checkbox', 'files'=>true, 'mandatory'=>false),
             'sql'                     => "blob NULL"
         ),
+        'preview' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tournament']['preview'],
+            'exclude'                 => true,
+            'inputType'               => 'fileTree',
+            'eval'                    => array('fieldType'=>'radio', 'filesOnly'=>true, 'mandatory'=>false),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
+
     )
 );
 

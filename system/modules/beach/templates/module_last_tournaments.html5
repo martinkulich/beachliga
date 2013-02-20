@@ -1,16 +1,22 @@
 <!-- indexer::stop -->
-<div class="last_tournaments">
-    <table>
-        <?php foreach($this->tournaments as $tournament){?>
-            <tr>
-                <td>
-                    <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>
-                </td>
-                <td>
-                    <?php echo $tournament->getRelated('club')->name ?>
-                </td>
-            </tr>
-        <?php } ?>
-    </table>
-</div>
-<!-- indexer::continue -->
+<section class="box box-features">
+    <h2>Minulé turnaje</h2>
+    <?php foreach($this->tournaments as $tournament){?>
+    <?php if($i <= $this->limit){ ?>
+    <article>
+        <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id; ?>" class="image image-full"><img src="<?php echo $tournament->getPreviewImage(232, 95, 'center_center') ?>" alt=""/></a>
+
+        <h3>
+            <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id; ?>">
+                <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
+                <?php echo $tournament->getRelated('club')->name ?>
+            </a>
+        </h3>
+
+        <p><?php echo $tournament->summary ?></p>
+    </article>
+    <?php } ?>
+    <?php } ?>
+
+    <a href="{{link_url::tournaments}}" class="button button-folder">Všechny turnaje</a>
+</section>

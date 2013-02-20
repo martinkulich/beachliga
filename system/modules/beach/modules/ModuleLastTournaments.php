@@ -40,5 +40,6 @@ class ModuleLastTournaments extends Module
     protected function compile()
     {
         $this->Template->tournaments = TournamentModel::getLastTournaments();
+        $this->Template->limit = 3;
     }
 }

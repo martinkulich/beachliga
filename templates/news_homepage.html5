@@ -1,0 +1,2 @@
+<a href="#"><?php echo $this->linkHeadline; ?></a>
+<span class="timestamp"><?php echo  $this->date; ?></span>

@@ -3,7 +3,6 @@
 $GLOBALS['TL_LANG']['league']['name'][0] = 'Název';
 $GLOBALS['TL_LANG']['league']['name'][1] = 'Prosím zadejte název soutěže.';
 
-$GLOBALS['TL_LANG']['league']['rules'] = 'Pravidla';
 $GLOBALS['TL_LANG']['league']['age_category'][0] = 'Věková kategorie';
 $GLOBALS['TL_LANG']['league']['age_category'][1] = 'Prosím zadejte věkovou kategorii soutěže.';
 $GLOBALS['TL_LANG']['league']['serve'][0] = 'Podání';
@@ -18,8 +17,8 @@ $GLOBALS['TL_LANG']['league']['ball'][0] = 'Míč';
 $GLOBALS['TL_LANG']['league']['ball'][1] = 'Prosím zadejte jakým míčem se hraje.';
 $GLOBALS['TL_LANG']['league']['number_of_players'][0] = 'Počet hráčů';
 $GLOBALS['TL_LANG']['league']['number_of_players'][1] = 'Prosím zadejte kolik hráču hraje v jednom týmu.';
-$GLOBALS['TL_LANG']['league']['other_rules'][0] = 'Ostatní pravidla';
-$GLOBALS['TL_LANG']['league']['other_rules'][1] = 'Prosím zadejte další pravidla soutěže.';
+$GLOBALS['TL_LANG']['league']['rules'][0] = 'Pravidla';
+$GLOBALS['TL_LANG']['league']['rules'][1] = 'Prosím vyplňte pravidla soutěže.';
 
 
 

@@ -16,11 +16,12 @@
  */
 ClassLoader::addClasses(array
 (
-//	// Classes
-//	'Contao\beach'            => 'system/modules/beach/classes/beach.php',
+	// Classes
+	'Contao\Tournament'            => 'system/modules/beach/classes/Tournament.php',
+
 //
 //	// Elements
-//	'Contao\Contentbeach'     => 'system/modules/beach/elements/Contentbeach.php',
+	'Contao\ContentTournamentGallery'     => 'system/modules/beach/elements/ContentTournamentGallery.php',
 
 	// Models
 	'Contao\ClubModel'       => 'system/modules/beach/models/ClubModel.php',
@@ -32,9 +33,13 @@ ClassLoader::addClasses(array
 	// Modules
 	'Contao\ModuleNextTournament'      => 'system/modules/beach/modules/ModuleNextTournament.php',
     'Contao\ModuleTournamentResults'      => 'system/modules/beach/modules/ModuleTournamentResults.php',
-    'Contao\ModuleLeagueRanking'      => 'system/modules/beach/modules/ModuleLeagueRanking.php',
     'Contao\ModuleLastTournaments'      => 'system/modules/beach/modules/ModuleLastTournaments.php',
     'Contao\ModuleTournamentDetail'      => 'system/modules/beach/modules/ModuleTournamentDetail.php',
+    'Contao\ModuleTournamentMap'      => 'system/modules/beach/modules/ModuleTournamentMap.php',
+    'Contao\ModuleRankingPreview'      => 'system/modules/beach/modules/ModuleRankingPreview.php',
+    'Contao\ModuleRanking'      => 'system/modules/beach/modules/ModuleRanking.php',
+    'Contao\ModuleTournaments'      => 'system/modules/beach/modules/ModuleTournaments.php',
+    'Contao\ModuleRules'      => 'system/modules/beach/modules/ModuleRules.php',
 ));
 
 
@@ -49,5 +54,10 @@ TemplateLoader::addFiles(array
     'module_league_ranking'      => 'system/modules/beach/templates',
     'module_last_tournaments'      => 'system/modules/beach/templates',
     'module_tournament_detail'      => 'system/modules/beach/templates',
+    'module_tournament_map'      => 'system/modules/beach/templates',
+    'module_ranking_preview'      => 'system/modules/beach/templates',
+    'module_ranking'         => 'system/modules/beach/templates',
+    'module_tournaments'      => 'system/modules/beach/templates',
+    'module_rules'      => 'system/modules/beach/templates',
 
 ));

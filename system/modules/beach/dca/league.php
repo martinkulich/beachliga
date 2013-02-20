@@ -60,7 +60,7 @@ $GLOBALS['TL_DCA']['league'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                     => 'name; {rules}, age_category, serve, receive, net_height, court_dimensions, ball, number_of_players, other_rules'
+		'default'                     => 'name; age_category, rules; class'
 	),
 
 
@@ -90,46 +90,19 @@ $GLOBALS['TL_DCA']['league'] = array
             'eval'                    => array('mandatory'=>false, 'maxlength'=>256),
             'sql'                     => "varchar(256) NOT NULL default ''"
         ),
-        'serve' => array
+        'class' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['league']['serve'],
+            'label'                   => &$GLOBALS['TL_LANG']['league']['class'],
             'inputType'               => 'text',
+            'exclude'                 => true,
             'eval'                    => array('mandatory'=>false, 'maxlength'=>256),
             'sql'                     => "varchar(256) NOT NULL default ''"
         ),
-        'receive' => array
+        'rules' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['league']['receive'],
-            'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'maxlength'=>256),
-            'sql'                     => "varchar(256) NOT NULL default ''"
-        ),
-        'court_dimensions' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['league']['court_dimensions'],
-            'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'maxlength'=>256),
-            'sql'                     => "varchar(256) NOT NULL default ''"
-        ),
-        'ball' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['league']['ball'],
-            'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'maxlength'=>256),
-            'sql'                     => "varchar(256) NOT NULL default ''"
-        ),
-        'number_of_players' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['league']['number_of_players'],
-            'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'rgxp'=>'digit'),
-            'sql'                     => "integer NOT NULL default 2"
-        ),
-        'other_rules' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['league']['other_rules'],
+            'label'                   => &$GLOBALS['TL_LANG']['league']['rules'],
             'inputType'               => 'textarea',
-            'eval'                    => array('mandatory'=>false),
+            'eval'                    => array('mandatory'=>false,'rte'=>'tinyMCE'),
             'sql'                     => "text NOT NULL default ''"
         ),
 	)

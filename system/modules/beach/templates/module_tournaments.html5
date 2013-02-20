@@ -1,0 +1,33 @@
+<?php if(count($this->futureTournaments)>0) { ?>
+<article class="box box-main">
+    <h2>Plánované turnaje</h2>
+    <ul>
+
+        <?php foreach($this->futureTournaments as $tournament) {?>
+        <li>
+            <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id?>" >
+            <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
+            <?php echo $tournament->getRelated('club')->name ?>
+            </a>
+        </li>
+        <?php }?>
+    </ul>
+</article>
+<?php }?>
+
+<?php if(count($this->pastTournaments)>0) { ?>
+<article class="box">
+    <h2>Odehrané turnaje</h2>
+    <ul>
+        <?php foreach($this->pastTournaments as $tournament) {?>
+        <li>
+            <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id ?>" >
+            <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
+            <?php echo $tournament->getRelated('club')->name ?>
+            </a>
+        </li>
+        <?php }?>
+    </ul>
+</article>
+<?php }?>
+&nbsp;

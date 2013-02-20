@@ -36,6 +36,46 @@ class TournamentModel extends Model
         return $objResult->numRows < 1 ? null : new static($objResult);
     }
 
+    public static function getTournaments($filter = null)
+    {
+        $now = new \DateTime();
+        $where = null;
+        switch($filter)
+        {
+            case 'past':
+                $where = " WHERE FROM_UNIXTIME(date) < '".$now->format('Y-m-d')."'";
+                break;
+            case 'future':
+                $where = " WHERE FROM_UNIXTIME(date) >= '".$now->format('Y-m-d')."'";
+                break;
+        }
+        $query = sprintf("
+        select *
+        from %s
+         %s
+        order by date ASC ",
+            self::$strTable,
+            $where
+
+        );
+
+        $objStatement = Database::getInstance()->prepare($query);
+        $objResult = $objStatement->execute();
+
+        $tournaments = array();
+        if ($objResult->numRows > 0) {
+
+            $objResult = static::postFind($objResult);
+            while ($tournament = $objResult->next()) {
+                $clubObject = new \TournamentModel($tournament);
+                $tournaments[] = $clubObject;
+            }
+
+        }
+
+        return $tournaments;
+    }
+
     public function hasResults()
     {
         $hasResults = false;
@@ -47,6 +87,35 @@ class TournamentModel extends Model
         }
 
         return $hasResults;
+    }
+
+    public function getLeagues()
+    {
+        $query = sprintf("
+            select  *
+            from league
+            where id in (
+            select l.id from league l
+
+            JOIN team t ON t.league = l.id
+            where t.pid = '%s'
+            )",
+            $this->id
+        );
+        $objStatement = Database::getInstance()->prepare($query);
+        $objResult = $objStatement->execute();
+
+        $leagues = array();
+        if ($objResult->numRows > 0) {
+
+            $objResult = static::postFind($objResult);
+            while ($league = $objResult->next()) {
+                $leagues[] = new LeagueModel($league);
+            }
+
+        }
+
+        return $leagues;
     }
 
     public function getTeams($orderBy = null)
@@ -62,7 +131,6 @@ class TournamentModel extends Model
                 $teams[] = $teamCollection->current();
             }
         }
-
         return $teams;
     }
 
@@ -97,5 +165,19 @@ class TournamentModel extends Model
         }
 
         return $value;
+    }
+
+    public function getPreviewImage($width = 150, $height = 100, $layout = 'center_center')
+    {
+        $objFile = \FilesModel::findByPk($this->preview);
+
+        if ($objFile === null || !is_file(TL_ROOT . '/' . $objFile->path)) {
+            $image = null;
+        } else {
+            $src = $objFile->path;
+            $image = \Image::get($src, $width, $height, $layout);
+        }
+
+        return $image;
     }
 }

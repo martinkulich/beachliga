@@ -1,0 +1,8 @@
+<section class="box box-style1">
+    <h2>Novinky</h2>
+    <ul class="style2">
+        <li>
+            <?php foreach($this->articles as $article) echo $article; ?>
+        </li>
+    </ul>
+</section>

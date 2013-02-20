@@ -14,7 +14,7 @@
 /**
  * Add content element
  */
-//$GLOBALS['TL_CTE']['includes']['comments'] = 'ContentComments';
+$GLOBALS['TL_CTE']['beach']['tournament_gallery'] = 'ContentTournamentGallery';
 
 
 /**
@@ -26,6 +26,11 @@ $GLOBALS['FE_MOD']['beach'] = array(
     'league_ranking' => 'ModuleLeagueRanking',
     'last_tournaments' => 'ModuleLastTournaments',
     'tournament_detail' => 'ModuleTournamentDetail',
+    'tournament_map' => 'ModuleTournamentMap',
+    'ranking_preview' => 'ModuleRankingPreview',
+    'ranking' => 'ModuleRanking',
+    'tournaments' => 'ModuleTournaments',
+    'rules' => 'ModuleRules',
 );
 
 

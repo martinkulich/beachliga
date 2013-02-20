@@ -1,0 +1,9 @@
+<article class="box box-main">
+    <h2>Pravidla</h2>
+    <?php foreach($this->leagues as $league) {?>
+    <div class="rules <?php echo $league->class ?>">
+        <h3><?php echo $league->name ?></h3>
+        <?php echo $league->rules ?>
+    </div>
+    <?php }?>
+</article>

@@ -33,4 +33,17 @@ class TeamModel extends Model
         $objResult = $objStatement->execute();
         return $objResult->numRows < 1 ? null : $objResult;
     }
+
+    public static function findAll(array $arrOptions = array())
+    {
+        $objectCollection = parent::findAll($arrOptions);
+        $objects = array();
+        if ($objectCollection) {
+            while ($objectCollection->next()) {
+                $objects[] = $objectCollection->current();
+            }
+        }
+
+        return $objects;
+    }
 }

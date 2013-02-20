@@ -1,0 +1,253 @@
+[07-Feb-2013 10:50:01 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Query error: Unknown column 'orderSRC' in 'field list' (SELECT orderSRC FROM tournament WHERE id='3' LIMIT 0,1)' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Database/Statement.php on line 317
+[07-Feb-2013 17:14:02 GMT] PHP Fatal error:  Class 'ClubModel' not found in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/dca/tournament.php on line 134
+[07-Feb-2013 17:22:10 GMT] PHP Fatal error:  Class 'player' not found in /Users/martinkulich/Sites/chamic/beachliga/system/cache/dca/team.php on line 149
+[07-Feb-2013 17:22:32 GMT] PHP Fatal error:  Class 'PlayerModel' not found in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/dca/team.php on line 145
+[07-Feb-2013 17:53:03 GMT] PHP Fatal error:  Cannot redeclare class Contao\ModuleLastTournament in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleNextTournament.php on line 49
+[07-Feb-2013 17:54:04 GMT] PHP Fatal error:  Class 'Contao\TournamentModel' not found in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleNextTournament.php on line 46
+[07-Feb-2013 17:54:46 GMT] PHP Fatal error:  Class 'Contao\DateTime' not found in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 31
+[07-Feb-2013 17:55:08 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Query error: Unknown column 'date' in 'where clause' (select * from club where date >= 2013-02-07 order by date ASC LIMIT 0,1)' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Database/Statement.php on line 317
+[07-Feb-2013 17:55:31 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Query error: Unknown column 'date' in 'where clause' (select * from club where date >= '2013-02-07' order by date ASC LIMIT 0,1)' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Database/Statement.php on line 317
+[07-Feb-2013 17:55:52 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[07-Feb-2013 17:56:38 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[07-Feb-2013 17:56:39 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[07-Feb-2013 17:56:58 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[07-Feb-2013 17:58:17 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[07-Feb-2013 17:58:21 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[07-Feb-2013 18:01:01 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[07-Feb-2013 18:01:52 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_next_tournament"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[08-Feb-2013 07:37:16 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Query error: Unknown column 'tournament.club_id' in 'on clause' (select * from tournament JOIN club on club.id = tournament.club_id where date >= '2013-02-08' order by date ASC LIMIT 0,1)' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Database/Statement.php on line 317
+[08-Feb-2013 07:40:24 GMT] PHP Fatal error:  Cannot redeclare class Contao\TournamentModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 42
+[08-Feb-2013 07:41:05 GMT] PHP Fatal error:  Cannot redeclare class Contao\TournamentModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 42
+[08-Feb-2013 07:56:02 GMT] 
+PHP Runtime notice: Non-static method Contao\Model::getRelated() should not be called statically in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 36
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(36): __error(2048, 'Non-static meth...', '/Users/martinku...', 36, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(36): Contao\Model::getRelated()
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleNextTournament.php(46): Contao\TournamentModel::findNextTournament()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleNextTournament->compile()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleNextTournament.php(38): Contao\Module->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/elements/ContentModule.php(63): Contao\ModuleNextTournament->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(446): Contao\ContentModule->generate()
+#7 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/ModuleArticle.php(179): Contao\Controller->getContentElement(Object(Contao\Model\Collection))
+#8 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleArticle->compile()
+#9 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/ModuleArticle.php(59): Contao\Module->generate()
+#10 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(374): Contao\ModuleArticle->generate(false)
+#11 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(227): Contao\Controller->getArticle(Object(Contao\Model\Collection), false, false, 'main')
+#12 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule('0', 'main')
+#13 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#14 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#15 {main}
+
+[08-Feb-2013 07:56:02 GMT] PHP Fatal error:  Using $this when not in object context in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 286
+[08-Feb-2013 07:57:23 GMT] PHP Fatal error:  Call to undefined method Contao\Database\Mysql\Result::getRelated() in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 36
+[08-Feb-2013 07:57:33 GMT] PHP Fatal error:  Call to undefined method Contao\Database\Mysql\Statement::getRelated() in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 36
+[08-Feb-2013 09:01:58 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_tournament_results"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[08-Feb-2013 09:02:49 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_tournament_results"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[08-Feb-2013 09:02:57 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Could not find template "module_tournament_results"' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/TemplateLoader.php on line 116
+[08-Feb-2013 09:05:21 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Field team does not seem to be related' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 294
+[08-Feb-2013 09:06:19 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Field pid does not seem to be related' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 294
+[08-Feb-2013 09:09:59 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Field teams does not seem to be related' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 294
+[08-Feb-2013 09:10:31 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Field teams does not seem to be related' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 294
+[08-Feb-2013 09:10:58 GMT] PHP Parse error:  syntax error, unexpected T_IF in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 293
+[08-Feb-2013 09:12:30 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Field teams does not seem to be related' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 294
+[08-Feb-2013 09:15:25 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Field teams does not seem to be related' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 295
+[08-Feb-2013 09:27:43 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:30:50 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:33:43 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:33:52 GMT] PHP Fatal error:  Call to protected method Contao\Model\Collection::fetchNext() from context 'Contao\TournamentModel' in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 44
+[08-Feb-2013 09:34:08 GMT] PHP Fatal error:  Call to protected method Contao\Model\Collection::fetchNext() from context 'Contao\TournamentModel' in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 44
+[08-Feb-2013 09:34:33 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:35:34 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:36:48 GMT] 
+PHP Recoverable error: Argument 1 passed to Contao\Model::findAll() must be an array, string given, called in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 42 and defined in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 416
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php(416): __error(4096, 'Argument 1 pass...', '/Users/martinku...', 416, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(42): Contao\Model::findAll('pid', '1')
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#7 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#9 {main}
+
+[08-Feb-2013 09:36:48 GMT] 
+PHP Warning: array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 421
+#0 [internal function]: __error(2, 'array_merge() [...', '/Users/martinku...', 421, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php(421): array_merge('pid', Array)
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(42): Contao\Model::findAll('pid', '1')
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#7 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#9 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#10 {main}
+
+[08-Feb-2013 09:36:48 GMT] 
+PHP Recoverable error: Argument 1 passed to Contao\Model::find() must be an array, null given, called in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 423 and defined in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 468
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php(468): __error(4096, 'Argument 1 pass...', '/Users/martinku...', 468, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php(423): Contao\Model::find(NULL)
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(42): Contao\Model::findAll('pid', '1')
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#7 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#9 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#10 {main}
+
+[08-Feb-2013 09:36:48 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:36:57 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:37:23 GMT] PHP Fatal error:  Call to a member function next() on a non-object in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 43
+[08-Feb-2013 09:37:45 GMT] PHP Fatal error:  Call to undefined method Contao\TeamModel::next() in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 43
+[08-Feb-2013 09:38:05 GMT] PHP Parse error:  syntax error, unexpected ')' in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 42
+[08-Feb-2013 09:38:09 GMT] 
+PHP Warning: Missing argument 2 for Contao\Model::findBy(), called in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 42 and defined in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php on line 396
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model.php(396): __error(2, 'Missing argumen...', '/Users/martinku...', 396, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(42): Contao\Model::findBy(Array)
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#7 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#9 {main}
+
+[08-Feb-2013 09:38:09 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:38:19 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:39:44 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 28
+[08-Feb-2013 09:41:19 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 33
+[08-Feb-2013 09:45:23 GMT] 
+PHP Warning: sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 32
+#0 [internal function]: __error(2, 'sprintf() [<a h...', '/Users/martinku...', 32, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php(32): sprintf('select * from %...', 'team')
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(42): Contao\TeamModel::findByTournament('1')
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#7 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#9 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#10 {main}
+
+[08-Feb-2013 09:45:23 GMT] PHP Fatal error: Uncaught exception 'Exception' with message 'Empty query string' thrown in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Database/Statement.php on line 139
+[08-Feb-2013 09:45:40 GMT] PHP Fatal error:  Class 'Contao\Collection' not found in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 35
+[08-Feb-2013 09:45:49 GMT] 
+PHP Warning: Missing argument 2 for Contao\Model\Collection::__construct(), called in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 35 and defined in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model/Collection.php on line 66
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model/Collection.php(66): __error(2, 'Missing argumen...', '/Users/martinku...', 66, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php(35): Contao\Model\Collection->__construct(Object(Contao\Database\Mysql\Result))
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(42): Contao\TeamModel::findByTournament('1')
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#7 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#9 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#10 {main}
+
+[08-Feb-2013 09:45:49 GMT] PHP Fatal error:  Cannot instantiate abstract class Contao\Model in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Model/Collection.php on line 379
+[08-Feb-2013 09:46:22 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 37
+[08-Feb-2013 09:46:38 GMT] PHP Fatal error:  Call to a member function next() on a non-object in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 43
+[08-Feb-2013 09:46:56 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 37
+[08-Feb-2013 09:47:43 GMT] PHP Fatal error:  Call to undefined method Contao\Database\Mysql\Result::fetchAll() in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 35
+[08-Feb-2013 09:48:08 GMT] PHP Fatal error:  Call to protected method Contao\Database\Mysql\Result::fetch_assoc() from context 'Contao\TeamModel' in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 35
+[08-Feb-2013 09:48:46 GMT] 
+PHP Recoverable error: Object of class Contao\Database\Mysql\Result could not be converted to string in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 43
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(43): __error(4096, 'Object of class...', '/Users/martinku...', 43, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#6 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#7 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#8 {main}
+
+[08-Feb-2013 09:49:29 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 37
+[08-Feb-2013 09:49:39 GMT] 
+PHP Recoverable error: Object of class Contao\Model\Collection could not be converted to string in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 43
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(43): __error(4096, 'Object of class...', '/Users/martinku...', 43, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#6 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#7 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#8 {main}
+
+[08-Feb-2013 09:50:39 GMT] PHP Fatal error:  Cannot redeclare class Contao\TeamModel in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TeamModel.php on line 37
+[08-Feb-2013 09:50:44 GMT] 
+PHP Recoverable error: Object of class Contao\Model\Collection could not be converted to string in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 43
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php(43): __error(4096, 'Object of class...', '/Users/martinku...', 43, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(51): Contao\TournamentModel->hasResults()
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(148): Contao\ModuleTournamentResults->compile()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#6 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#7 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#8 {main}
+
+[08-Feb-2013 09:56:33 GMT] PHP Fatal error:  Call to a member function getRelated() on a non-object in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/templates/module_tournament_results.html5 on line 5
+[08-Feb-2013 09:58:04 GMT] PHP Fatal error:  Call to undefined method Contao\Model\Collection::fetch() in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/models/TournamentModel.php on line 59
+[08-Feb-2013 09:59:53 GMT] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/DcaExtractor.php on line 107
+[08-Feb-2013 10:00:22 GMT] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/DcaExtractor.php on line 107
+[08-Feb-2013 10:00:34 GMT] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/DcaExtractor.php on line 107
+[08-Feb-2013 10:00:34 GMT] PHP Fatal error:  Call to a member function getRelated() on a non-object in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/templates/module_tournament_results.html5 on line 5
+[08-Feb-2013 10:04:19 GMT] 
+PHP Warning: Invalid argument supplied for foreach() in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/templates/module_tournament_results.html5 on line 4
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/templates/module_tournament_results.html5(4): __error(2, 'Invalid argumen...', '/Users/martinku...', 4, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Template.php(255): include('/Users/martinku...')
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/classes/FrontendTemplate.php(37): Contao\Template->parse()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(165): Contao\FrontendTemplate->parse()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#7 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#9 {main}
+
+[08-Feb-2013 10:05:01 GMT] 
+PHP Warning: Invalid argument supplied for foreach() in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/templates/module_tournament_results.html5 on line 4
+#0 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/templates/module_tournament_results.html5(4): __error(2, 'Invalid argumen...', '/Users/martinku...', 4, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Template.php(255): include('/Users/martinku...')
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/classes/FrontendTemplate.php(37): Contao\Template->parse()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/modules/Module.php(165): Contao\FrontendTemplate->parse()
+#4 /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php(38): Contao\Module->generate()
+#5 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Controller.php(284): Contao\ModuleTournamentResults->generate()
+#6 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(109): Contao\Controller->getFrontendModule(Object(Contao\ModuleModel), 'main')
+#7 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#8 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#9 {main}
+
+[08-Feb-2013 10:07:47 GMT] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/DcaExtractor.php on line 107
+[08-Feb-2013 10:13:34 GMT] PHP Parse error:  syntax error, unexpected T_VARIABLE in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php on line 58
+[08-Feb-2013 10:13:37 GMT] 
+PHP Warning: Cannot modify header information - headers already sent by (output started at /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php:57) in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Template.php on line 277
+#0 [internal function]: __error(2, 'Cannot modify h...', '/Users/martinku...', 277, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Template.php(277): header('Vary: User-Agen...', false)
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/classes/FrontendTemplate.php(221): Contao\Template->output()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(163): Contao\FrontendTemplate->output()
+#4 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#5 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#6 {main}
+
+[08-Feb-2013 10:13:37 GMT] 
+PHP Warning: Cannot modify header information - headers already sent by (output started at /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php:57) in /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Template.php on line 278
+#0 [internal function]: __error(2, 'Cannot modify h...', '/Users/martinku...', 278, Array)
+#1 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/library/Contao/Template.php(278): header('Content-Type: t...')
+#2 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/classes/FrontendTemplate.php(221): Contao\Template->output()
+#3 /Users/martinkulich/Sites/chamic/beachliga/system/modules/core/pages/PageRegular.php(163): Contao\FrontendTemplate->output()
+#4 /Users/martinkulich/Sites/chamic/beachliga/index.php(250): Contao\PageRegular->generate(Object(Contao\PageModel))
+#5 /Users/martinkulich/Sites/chamic/beachliga/index.php(411): Index->run()
+#6 {main}
+
+[08-Feb-2013 10:14:17 GMT] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php on line 57
+[08-Feb-2013 10:14:37 GMT] PHP Fatal error:  Call to a member function fetchEach() on a non-object in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/modules/ModuleTournamentResults.php on line 57
+[08-Feb-2013 10:19:56 GMT] PHP Fatal error:  Call to a member function getRelated() on a non-object in /Users/martinkulich/Sites/chamic/beachliga/system/modules/beach/templates/module_tournament_results.html5 on line 11

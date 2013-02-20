@@ -1,0 +1,41 @@
+<section class="box box-style2">
+<?php foreach($this->leagues as $league) {?>
+<div class="tournament_league_results <?php echo $league->class ?>">
+    <h3><?php echo $league->name ?></h3>
+    <div class="ranking_players">
+        <h4>Žebříček hráčů</h4>
+    <table>
+        <tbody>
+        <?php foreach($league->getPlayers(3) as $player) {?>
+        <tr>
+            <td>
+                <?php echo $player ?>
+            </td>
+            <td>
+                <?php echo $player->rank?>
+            </td>
+        </tr>
+        <?php }?>
+        </tbody>
+    </table>
+    </div>
+    <div class="ranking_clubs">
+        <h4>Žebříček klubů</h4>
+        <table>
+            <tbody>
+            <?php foreach($league->getClubs(3) as $club) {?>
+            <tr>
+                <td>
+                    <?php echo $club ?>
+                </td>
+                <td>
+                    <?php echo $club->rank?>
+                </td>
+            </tr>
+            <?php }?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php }?>
+</section>

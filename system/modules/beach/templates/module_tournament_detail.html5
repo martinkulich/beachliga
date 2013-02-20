@@ -1,31 +1,29 @@
-<div class="tournament_detail">
-    <h1>
-        <?php echo $this->tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']).' '.$this->tournamentClub->name
-        ?>
-    </h1>
+<?php if($this->tournament){ ?>
+<article class="box box-main">
+    <header>
+        <h2>
+            <?php echo $this->tournamentClub->name ?>
+            &nbsp;|
+            <?php echo $this->tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>
+        </h2>
+    </header>
 
-    <?php if(count($this->tournamentTeams)) { ?>
-    <?php if($this->showResults) { ?>
+    <!--<span class="image image-full"><img src="images/pic05.jpg" alt=""/></span>-->
+
+    <p><?php echo $this->tournament->descrip ?></p>
+</article>
+
+<?php if(count($this->leagues)>0) { ?>
+<?php if($this->showResults) { ?>
+<article class="box">
+    <h2>Výsledková listina</h2>
     <div class="tournament_results">
+        <?php foreach($this->leagues as $league) {?>
+        <div class="tournament_league_results">
+        <h3><?php echo $league->name ?></h3>
         <table>
-            <thead>
-            <tr>
-                <th class='rank'>
-                    Počet bodů
-                </th>
-                <th class='player'>
-                    Hráč 1
-                </th>
-                <th class='coplayer'>
-                    Hráč 2
-                </th>
-                <th class='club'>
-                    Klub
-                </th>
-            </tr>
-            </thead>
             <tbody>
-            <?php foreach($this->tournamentTeams as $team) {?>
+            <?php foreach($league->getTeams($this->tournament) as $team) {?>
             <tr>
                 <td>
                     <?php echo $team->rank?>
@@ -43,40 +41,42 @@
             <?php }?>
             </tbody>
         </table>
+        </div>
+        <?php }?>
     </div>
-    <?php }else{?>
+</article>
+<?php }else{?>
+<article class="box">
+    <h2>Seznam účastníků</h2>
+
     <div class="tournament_teams">
-        <table>
-            <thead>
-            <tr>
-                <th class='player'>
-                    Hráč 1
-                </th>
-                <th class='coplayer'>
-                    Hráč 2
-                </th>
-                <th class='club'>
-                    Klub
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach($this->tournamentTeams as $team) {?>
-            <tr>
-                <td>
-                    <?php echo $team->getRelated('player'); ?>
-                </td>
-                <td>
-                    <?php echo $team->getRelated('coplayer'); ?>
-                </td>
-                <td>
-                    <?php echo $team->getRelated('club')->name?>
-                </td>
-            </tr>
-            <?php }?>
-            </tbody>
-        </table>
+        <?php foreach($this->leagues as $league) {?>
+        <div class="tournament_league_teams">
+            <h3><?php echo $league->name ?></h3>
+            <table>
+                <tbody>
+                <?php foreach($league->getTeams($this->tournament) as $team) {?>
+                <tr>
+                    <td>
+                        <?php echo $team->getRelated('player'); ?>
+                    </td>
+                    <td>
+                        <?php echo $team->getRelated('coplayer'); ?>
+                    </td>
+                    <td>
+                        <?php echo $team->getRelated('club')->name?>
+                    </td>
+                </tr>
+                <?php }?>
+                </tbody>
+            </table>
+        </div>
+        <?php }?>
     </div>
-    <?php }?>
-    <?php }?>
-</div>
+</article>
+<article class="box">
+    <h2>Registrační formulář</h2>
+</article>
+<?php }?>
+<?php }?>
+<?php }?>

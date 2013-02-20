@@ -26,5 +26,8 @@ class ClubModel extends Model
 	 */
 	protected static $strTable = 'club';
 
-
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

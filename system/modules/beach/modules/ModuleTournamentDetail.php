@@ -42,16 +42,14 @@ class ModuleTournamentDetail extends Module
     protected function compile()
     {
         $tournamentId = \Input::get('id');
-        $tournamentId = 1;
         $this->Template->tournament = TournamentModel::findByPk($tournamentId);
 
         if ($this->Template->tournament) {
             $this->Template->tournamentClub = $this->Template->tournament->getRelated('club');
             $this->Template->showResults = $this->Template->tournament->hasResults();
-            $this->Template->showResults = false;
             $orderBy = $this->Template->showResults ? 'rank DESC' : 'tstamp ASC';
 
-            $this->Template->tournamentTeams = $this->Template->tournament->getTeams($orderBy);
+            $this->Template->leagues = $this->Template->tournament->getLeagues();
 
         }
     }

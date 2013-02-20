@@ -3,5 +3,22 @@ zebricky
     kompletni
 pravidla
 registracni formular
-okno s kontaktem
 fotogalerka
+
+team
+    sloupec poradi (3.-4.) vs pocet podu
+
+seznam turnaju
+
+
+stylovani
+    hero obrazek
+    barvy ..?
+    mapa - zaobleni hran
+    seznamy - tabulky
+    fotogalerie
+
+    zebricky
+        nahled
+        celkove
+    seznam ucastniku/vysledky
