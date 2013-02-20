@@ -1,0 +1,45 @@
+funkcionalita
+	cms
+		staticke stranky
+		novinky
+		fotogalery jednotlivych turnaju
+web
+Struktura webu:
+	Homepage:
+		hero zone
+			treba nejaka fotka s tematem plazoveho volejbalu nebo fotka a pres to moto (zatim nevim jaky)
+		náhled posledních (tří) novinek
+		následující turnaj
+			datum
+			název pořádajícího klubu - odkaz na kontakt daneho klubu viz. kontakty
+			link na registraci hračů
+		náhled (posledních tří/ nebo možná ján posledního) již proběhlého turnaje
+			fotka s proklikem do fotogalerie
+			link na výsledky
+	Pravidla
+		pro každou věkovou kategorii (jsou barevně odlišeny, možný by stálo zato to nějak graficky využít)
+	turnaje
+		budoucí
+		již proběhlé
+			fotogalerie
+			výsledky
+	žebříčky
+		(opět možno využít barevnou soutěží)
+		žebříčky jsou jak za jednotlivce tak za jednotlivé kluby
+		jsou celkem důležité, motivace pro děti, soutěživost
+			klidně bych je i nějak protlačil na hlavní stránku nebo do layoutu (třeba vedoucí klub a první z každé kategorie)
+	kontakty
+		google mapa se špendlíky pro jednotlive kluby
+		založky pro jednotlivé kluby
+			kontakt
+			zazumovat google mapu na dany klub
+		kontaktni formular
+moduly
+	terminy
+	vysledky 
+	zebricky
+		barevne
+		po klubech
+	sportoviste
+		mapa
+		kontakty
