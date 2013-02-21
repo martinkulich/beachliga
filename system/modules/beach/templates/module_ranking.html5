@@ -4,7 +4,7 @@
     <h2>Kompetní výsledky</h2>
     <?php foreach($this->leagues as $league) {?>
     <div class="ranking <?php echo $league->class ?>">
-        <h3><?php echo $league->name ?></h3>
+        <h3><?php echo $league->age_category ?></h3>
         <table>
             <tbody>
             <tr>
