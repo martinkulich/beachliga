@@ -40,6 +40,11 @@
            <?php echo $this->club->email ?>
         </li>
         <?php } ?>
+        <?php if($this->club->url){ ?>
+        <li class="url">
+            <a href="<?php echo $this->club->url ?>"><?php echo $this->club->url ?></a>
+        </li>
+        <?php } ?>
     </ul>
 </section>
 </section>
