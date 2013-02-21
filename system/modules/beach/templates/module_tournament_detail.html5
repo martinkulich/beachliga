@@ -74,9 +74,9 @@
         <?php }?>
     </div>
 </article>
-<article class="box">
-    <h2>Registrační formulář</h2>
-</article>
+<!--<article class="box">-->
+    <!--<h2>Registrační formulář</h2>-->
+<!--</article>-->
 <?php }?>
 <?php }?>
 <?php }?>
