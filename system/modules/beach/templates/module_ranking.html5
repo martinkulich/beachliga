@@ -12,37 +12,36 @@
         </ul>
         <div class="tab-content league_ranking">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>"
-                 id="<?php echo $league->class; ?>_league_ranking">
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>" id="<?php echo $league->class; ?>_league_ranking">
                 <table>
                     <tbody>
-                    <tr>
+                    <tr class="ranking_header">
                         <td>
                         </td>
                         <?php foreach($this->tournaments as $tournament) {?>
-                        <td>
+                        <td class="ranking_other">
                             <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id?>">
                                 <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>
                             </a>
                         </td>
                         <?php }?>
-                        <td>
+                        <td class="ranking_other">
                             Celkem
                         </td>
                     </tr>
                     <?php foreach($league->getPlayers() as $player) {?>
                     <tr>
-                        <td>
+                        <td class="ranking_player">
                             <?php echo $player ?>
                         </td>
                         <?php foreach($this->tournaments as $tournament) {?>
-                        <td>
+                        <td class="ranking_other">
                             <?php  echo isset($this->ranking[$league->id][$player->id][$tournament->id]) ?
                             $this->ranking[$league->id][$player->id][$tournament->id] : '-' ?>
                             <?php //echo $league->id.','.$player->id.','.$tournament->id ?>
                         </td>
                         <?php }?>
-                        <td>
+                        <td class="ranking_other">
                             <?php  echo isset($this->ranking[$league->id][$player->id]['all']) ?
                             $this->ranking[$league->id][$player->id]['all'] : '-' ?>
                         </td>
