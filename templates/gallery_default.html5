@@ -1,9 +1,10 @@
-<table>
+<div class="gallery">
     <?php foreach ($this->body as $class=>$row){ ?>
-    <tr>
+    <div class="gallery_row">
+        <ul>
         <?php foreach ($row as $col){ ?>
         <?php if ($col->addImage){ ?>
-        <td class="<?php echo $class.' '.$col->class; ?>">
+        <li class="<?php echo $class.' '.$col->class; ?>" >
             <figure class="image_container"
             <?php if ($col->margin){ ?> style="<?php echo $col->margin; ?>"<?php }; ?>>
             <?php if ($col->href){ ?>
@@ -17,9 +18,10 @@
             </figcaption>
             <?php }; ?>
             </figure>
-        </td>
+        </li>
         <?php }; ?>
         <?php }; ?>
-    </tr>
+        </ul>
+    </div>
     <?php }; ?>
 </table>
