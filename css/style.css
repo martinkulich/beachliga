@@ -588,6 +588,22 @@
 	{
 		width: 10%;
 	}
+	.ranking_other
+	{
+		text-align: center;
+	}
+	.ranking_player
+	{
+		text-align: left;
+	}
+	.league_ranking td
+	{
+		width: auto;
+	}
+	.ranking_header
+	{
+		background-color: rgba(53, 43, 35,0.95);
+	}
 	tr.last 
 	{
 		border-bottom: none;
