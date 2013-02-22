@@ -456,7 +456,17 @@
 			background: rgba(122, 104, 90, 0.95);			
 			/*box-shadow: inset 0px 0px 0px 1px #6594af;*/
 			color: #fff;
+			padding: 0;
+			
 		}
+			.box-style2 .tab-content
+			{
+				margin-top: 0;
+			}					
+			.box-style2 .tab-pane
+			{
+				min-height: 327px;
+			}
 
 		.box-main
 		{
@@ -566,7 +576,18 @@
 		border-bottom: 1px solid #3d342e;
 		line-height: 2em;
 	}
-
+	.league_ranking_preview tr 
+	{
+		border-bottom: 1px solid #897b70;
+	}
+	.league_ranking_preview td.ranking-preview_1
+	{
+		width: 90%;
+	}
+	.league_ranking_preview td.ranking-preview_2
+	{
+		width: 10%;
+	}
 	tr.last 
 	{
 		border-bottom: none;

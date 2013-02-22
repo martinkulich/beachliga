@@ -1,6 +1,6 @@
 
     <div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs side-tabs">
             <?php $i = 1; foreach($this->leagues as $league) {?>
             <li class="<?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'tab1' : 'tab'.$i ?>">
                 <a href="{{page::alias}}.html#<?php echo $league->class; ?>_league_ranking_preview" data-toggle="tab"><?php echo $league->
@@ -19,10 +19,10 @@
                         <tbody>
                         <?php foreach($league->getPlayers(3) as $player) {?>
                         <tr>
-                            <td>
+                            <td class="ranking-preview_1">
                                 <?php echo $player ?>
                             </td>
-                            <td>
+                            <td class="ranking-preview_2">
                                 <?php echo $player->rank?>
                             </td>
                         </tr>
@@ -36,10 +36,10 @@
                         <tbody>
                         <?php foreach($league->getClubs(3) as $club) {?>
                         <tr>
-                            <td>
+                            <td class="ranking-preview_1">
                                 <?php echo $club ?>
                             </td>
-                            <td>
+                            <td class="ranking-preview_2">
                                 <?php echo $club->rank?>
                             </td>
                         </tr>
