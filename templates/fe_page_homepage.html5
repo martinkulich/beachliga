@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="css/5grid/core-1200px.css"/>
         <link rel="stylesheet" href="css/5grid/core-noscript.css"/>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-new.css"/>
         <link rel="stylesheet" href="css/style-desktop.css"/>
     </noscript>
     <!--[if lte IE 8]>
@@ -38,7 +39,7 @@
 </head>
 <body id="top" class="homepage"
 <?php if ($this->onload): ?> onload="<?php echo $this->onload; ?>"<?php endif; ?>>
-
+<div id="wrapper">
 <!-- Header Wrapper -->
 <div id="header-wrapper">
     <div class="5grid-layout">
@@ -114,6 +115,8 @@
             </div>
         </div>
     </div>
+</div>
+
 </div>
 
 <?php echo $this->mootools; ?>

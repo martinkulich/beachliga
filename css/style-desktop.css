@@ -82,7 +82,7 @@
 	
 	#main-wrapper
 	{
-		padding: 0 0 4.5em 0;
+		/*padding: 0 0 4.5em 0;*/padding: 0 0 3em 0;
 	}
 	
 	#footer-wrapper
@@ -96,8 +96,8 @@
 
 	#header
 	{
-		background: #1e262b;
-		background: rgba(30, 38, 42, 0.95);
+		background: #1e120a;
+		background: rgba(30, 18, 10, 0.95);
 		border-radius: 6px;
 		position: relative;
 		top: 6em;
@@ -169,7 +169,7 @@
 				#nav ul li.current_page_item a,
 				#nav ul li.active a
 				{
-					background: #0d161c;
+					background: #0e0803;
 					color: #fff;
 				}
 
@@ -241,7 +241,7 @@
 		{
 			position: absolute;
 			left: 1.75em;
-			bottom: 2em;
+			/*bottom: 2em;*/ top: 4em;			
 		}
 	
 			#banner .caption h2

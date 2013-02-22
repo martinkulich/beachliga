@@ -11,8 +11,8 @@
 
 	body
 	{
-		background: #131c21;
-		color: #979797;
+		background: #fae0af;
+		/*color: #979797;*/color: #fff;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 10pt;
 		font-weight: 400;
@@ -180,7 +180,7 @@
 		ul.style3 li
 		{
 			position: relative;
-			border-top: solid 1px #1e272b;
+			border-top: solid 1px #716046;
 			padding: 1.5em 0 0 32px;
 			margin-top: 1.5em;
 		}
@@ -220,9 +220,17 @@
 		ul.contact li
 		{
 			position: relative;
-			border-top: solid 1px #1e272b;
+			border-top: solid 1px #e67d64;
 			padding: 1.25em 0 0 44px;
 			margin-top: 1.25em;
+		}
+		#footer-wrapper ul.contact li
+		{
+			border-top: solid 1px #716046;
+		}
+		#footer-wrapper ul.contact li.home 
+		{
+			border-top: none;
 		}
 
 			ul.contact li:before
@@ -281,10 +289,10 @@
 	{
 		position: relative;
 		display: inline-block;
-		background: #272f33;
+		background: #5d3713;
 		color: #fff;
 		border-radius: 6px;
-		box-shadow: inset 0px 0px 0px 1px #343a3e;
+		box-shadow: inset 0px 0px 0px 1px #7f5530;
 		padding: 1em 2em 1em 50px;
 		text-decoration: none;
 		font-weight: 700;
@@ -298,8 +306,8 @@
 	
 		.button:hover
 		{
-			background: #2f383d;
-			box-shadow: inset 0px 0px 0px 1px #384044;
+			background: #55300c;
+			box-shadow: inset 0px 0px 0px 1px #6c441f;
 		}
 	
 		.button:before
@@ -372,14 +380,14 @@
 
 		.bigbutton-style1
 		{
-			background: #cc3942;
-			background: rgba(204, 57, 66, 0.95);
-			box-shadow: inset 0px 0px 0px 1px #d96b71;
+			background: #d55131;
+			background: rgba(213, 81, 49, 0.95);
+			box-shadow: inset 0px 0px 0px 1px #da6347;
 		}
 		
 			.bigbutton-style1:hover
 			{
-				background: #d6333e;
+				background: #cb371d;
 			}
 
 		.bigbutton-style2
@@ -396,8 +404,8 @@
 
 	.box
 	{
-		background: #1e262b;
-		background: rgba(30, 38, 42, 0.95);
+		background: #1e120a;
+		background: rgba(30, 18, 10, 0.95);
 		border-radius: 6px;
 		padding: 3em 2em 3em 2em;
 		overflow: hidden;
@@ -436,18 +444,18 @@
 
 		.box-style1
 		{
-			background: #cc3942;
-			background: rgba(204, 57, 66, 0.95);
-			box-shadow: inset 0px 0px 0px 1px #d96b71;
+			background: #e05433;
+			background: rgba(224, 84, 51, 0.95);
+			box-shadow: inset 0px 0px 0px 1px #ff8b63;
 			color: #f5d7d9;
 		}
 
 		.box-style2
 		{
-			background: #337297;
-			background: rgba(51, 114, 151, 0.95);
-			box-shadow: inset 0px 0px 0px 1px #6594af;
-			color: #b8d2e2;
+			background: #7a685a;
+			background: rgba(122, 104, 90, 0.95);			
+			/*box-shadow: inset 0px 0px 0px 1px #6594af;*/
+			color: #fff;
 		}
 
 		.box-main
@@ -476,13 +484,20 @@
 				margin-top: 2em;
 			}
 
+	#dlh_googlemap_1 
+	{
+		border-radius: 6px;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+	}
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
 	#header-wrapper
 	{
-		background: #3178a1 url('../images/banner.jpg') top center no-repeat;
+		background: #7e6c41 url('../images/banner2.jpg') top center no-repeat;
 	}
 	
 	#banner-wrapper
@@ -491,12 +506,15 @@
 	
 	#main-wrapper
 	{
-		background: #172025;
+		
 	}
 	
 	#footer-wrapper
 	{
+		background: rgba(10,10,10,0.6);
+
 	}
+	#wrapper {background: url('../images/main2.jpg') bottom center no-repeat;}
 
 /*********************************************************************************/
 /* Banner                                                                        */

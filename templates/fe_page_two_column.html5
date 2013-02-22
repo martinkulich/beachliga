@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="css/5grid/core-1200px.css"/>
         <link rel="stylesheet" href="css/5grid/core-noscript.css"/>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-new.css"/>
         <link rel="stylesheet" href="css/style-desktop.css"/>
     </noscript>
     <!--[if lte IE 8]>
@@ -37,7 +38,7 @@
     <![endif]-->
 </head>
 <body>
-
+<div id="wrapper">
 <!-- Header Wrapper -->
 <div id="header-wrapper">
     <div class="5grid-layout">
@@ -103,7 +104,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <?php echo $this->mootools; ?>
 <?php if (!$this->disableCron): ?>
 
