@@ -17,61 +17,77 @@
 <?php if($this->showResults) { ?>
 <article class="box">
     <h2>Výsledková listina</h2>
-    <div class="tournament_results">
-        <?php foreach($this->leagues as $league) {?>
-        <div class="tournament_league_results">
-        <h3><?php echo $league->name ?></h3>
-        <table>
-            <tbody>
-            <?php foreach($league->getTeams($this->tournament) as $team) {?>
-            <tr>
-                <td>
-                    <?php echo $team->rank?>
-                </td>
-                <td>
-                    <?php echo $team->getRelated('player'); ?>
-                </td>
-                <td>
-                    <?php echo $team->getRelated('coplayer'); ?>
-                </td>
-                <td>
-                    <?php echo $team->getRelated('club')->name?>
-                </td>
-            </tr>
-            <?php }?>
-            </tbody>
-        </table>
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <li class="<?php echo $i == 1 ? 'active' : null ?>">
+                <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id; ?>#<?php echo $league->class; ?>_tournament_results" data-toggle="tab"><?php echo $league->age_category; ?></a>
+            </li>
+            <?php $i++; }?>
+        </ul>
+        <div class="tab-content tournament_results">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_tournament_results">
+                <table>
+                    <tbody>
+                    <?php foreach($league->getTeams($this->tournament) as $team) {?>
+                    <tr>
+                        <td>
+                            <?php echo $team->rank?>
+                        </td>
+                        <td>
+                            <?php echo $team->getRelated('player'); ?>
+                        </td>
+                        <td>
+                            <?php echo $team->getRelated('coplayer'); ?>
+                        </td>
+                        <td>
+                            <?php echo $team->getRelated('club')->name?>
+                        </td>
+                    </tr>
+                    <?php }?>
+                    </tbody>
+                </table>
+            </div>
+            <?php $i++; }?>
         </div>
-        <?php }?>
     </div>
+    
 </article>
 <?php }else{?>
 <article class="box">
     <h2>Seznam účastníků</h2>
-
-    <div class="tournament_teams">
-        <?php foreach($this->leagues as $league) {?>
-        <div class="tournament_league_teams">
-            <h3><?php echo $league->name ?></h3>
-            <table>
-                <tbody>
-                <?php foreach($league->getTeams($this->tournament) as $team) {?>
-                <tr>
-                    <td>
-                        <?php echo $team->getRelated('player'); ?>
-                    </td>
-                    <td>
-                        <?php echo $team->getRelated('coplayer'); ?>
-                    </td>
-                    <td>
-                        <?php echo $team->getRelated('club')->name?>
-                    </td>
-                </tr>
-                <?php }?>
-                </tbody>
-            </table>
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <li class="<?php echo $i == 1 ? 'active' : null ?>">
+                <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id; ?>#<?php echo $league->class; ?>_tournament_teams" data-toggle="tab"><?php echo $league->age_category; ?></a>
+            </li>
+            <?php $i++; }?>
+        </ul>
+        <div class="tab-content tournament_teams">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_tournament_teams">
+                <table>
+                    <tbody>
+                    <?php foreach($league->getTeams($this->tournament) as $team) {?>
+                    <tr>
+                        <td>
+                            <?php echo $team->getRelated('player'); ?>
+                        </td>
+                        <td>
+                            <?php echo $team->getRelated('coplayer'); ?>
+                        </td>
+                        <td>
+                            <?php echo $team->getRelated('club')->name?>
+                        </td>
+                    </tr>
+                    <?php }?>
+                    </tbody>
+                </table>
+            </div>
+            <?php $i++; }?>
         </div>
-        <?php }?>
     </div>
 </article>
 <!--<article class="box">-->
