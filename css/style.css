@@ -644,3 +644,9 @@
 		display: inline-table;
 		width: 260px;
 	}
+
+	#mbImage img
+	{
+		width: 100%;
+		height: 100%;
+	}
