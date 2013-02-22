@@ -11,7 +11,7 @@
         <section class="box box-style2">
         <div class="tab-content league_ranking_preview">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>"
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>"
                  id="<?php echo $league->class; ?>_league_ranking_preview">
                 <div class="ranking_players">
                     <h4>Žebříček hráčů</h4>

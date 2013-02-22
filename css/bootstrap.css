@@ -132,9 +132,6 @@
 .nav-tabs {
   /*border-bottom: 1px solid #ddd;*/
 }
-.nav-tabs {
-  border-bottom: 2px solid #ceaa01;
-}
 
 .nav-tabs > li {
   margin-bottom: -1px;
@@ -323,7 +320,14 @@
 }
 .tab-content {
   overflow: auto;
+  margin-top: -1.4em;
 }
+/*.tab_content > .tab-pane .yellow .active {
+  border: 2px solid #ceaa01;
+}
+.tab_content > .tab-pane {
+  border: 2px solid #000;
+}*/
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {
@@ -333,6 +337,23 @@
 .pill-content > .pill-pane {
   display: none;
 }
+.tab-content > .tab-pane 
+{
+  padding: 1.5em 1.5em 0.1em 1.5em;
+}
+.tab-content > .tab-pane.yellow {
+  border: 2px solid #ceaa01;
+}
+.tab-content > .tab-pane.red {
+  border: 2px solid #e40d0d;
+}
+.tab-content > .tab-pane.green {
+  border: 2px solid #088407;
+}
+.tab-content > .tab-pane.blue {
+  border: 2px solid #163fa9;
+}
+
 .tab-content > .active,
 .pill-content > .active {
   display: block;

@@ -11,7 +11,7 @@
         </ul>
         <div class="tab-content league_rules">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_league_rules">
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>" id="<?php echo $league->class; ?>_league_rules">
                 <?php echo $league->rules ?>
             </div>
             <?php $i++; }?>

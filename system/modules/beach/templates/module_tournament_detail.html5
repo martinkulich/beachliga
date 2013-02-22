@@ -27,7 +27,7 @@
         </ul>
         <div class="tab-content tournament_results">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_tournament_results">
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>" id="<?php echo $league->class; ?>_tournament_results">
                 <table>
                     <tbody>
 
@@ -69,7 +69,7 @@
         </ul>
         <div class="tab-content tournament_teams">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_tournament_teams">
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>" id="<?php echo $league->class; ?>_tournament_teams">
                 <table>
                     <tbody>
                     <?php $teams = $league->getTeams($this->tournament); $teamCount = count($teams); $j = 1; ?>

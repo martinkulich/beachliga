@@ -564,9 +564,36 @@
 	tr
 	{
 		border-bottom: 1px solid #3d342e;
+		line-height: 2em;
+	}
+
+	tr.last 
+	{
+		border-bottom: none;
 	}
 
 	td
 	{
 		width: 33%;
+	}
+
+	.tournament_results table td
+	{
+		width: auto;
+	}
+	.tournament_results table td.rank
+	{
+		width: 5%;
+	}
+	.tournament_results table td.player
+	{
+		width: 20%;
+	}
+		.tournament_results table td.codplayer
+	{
+		width: 20%;
+	}
+		.tournament_results table td.club
+	{
+		width: 40%;
 	}
