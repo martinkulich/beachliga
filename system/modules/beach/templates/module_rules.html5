@@ -1,9 +1,20 @@
 <article class="box box-main">
     <h2>Pravidla</h2>
-    <?php foreach($this->leagues as $league) {?>
-    <div class="rules <?php echo $league->class ?>">
-        <h3><?php echo $league->age_category ?></h3>
-        <?php echo $league->rules ?>
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <li class="<?php echo $i == 1 ? 'active' : null ?>">
+                <a href="{{page::alias}}.html#<?php echo $league->class; ?>_league_rules" data-toggle="tab"><?php echo $league->
+                    age_category; ?></a>
+            </li>
+            <?php $i++; }?>
+        </ul>
+        <div class="tab-content league_rules">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_league_rules">
+                <?php echo $league->rules ?>
+            </div>
+            <?php $i++; }?>
+        </div>
     </div>
-    <?php }?>
 </article>

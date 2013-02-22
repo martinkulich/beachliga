@@ -1,41 +1,54 @@
-<section class="box box-style2">
-<?php foreach($this->leagues as $league) {?>
-<div class="tournament_league_results <?php echo $league->class ?>">
-    <h3><?php echo $league->age_category ?></h3>
-    <div class="ranking_players">
-        <h4>Žebříček hráčů</h4>
-    <table>
-        <tbody>
-        <?php foreach($league->getPlayers(3) as $player) {?>
-        <tr>
-            <td>
-                <?php echo $player ?>
-            </td>
-            <td>
-                <?php echo $player->rank?>
-            </td>
-        </tr>
-        <?php }?>
-        </tbody>
-    </table>
+
+    <div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <li class="<?php echo $i == 1 ? 'active' : null ?>">
+                <a href="{{page::alias}}.html#<?php echo $league->class; ?>_league_ranking_preview" data-toggle="tab"><?php echo $league->
+                    age_category; ?></a>
+            </li>
+            <?php $i++; }?>
+        </ul>
+        <section class="box box-style2">
+        <div class="tab-content league_ranking_preview">
+            <?php $i = 1; foreach($this->leagues as $league) {?>
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>"
+                 id="<?php echo $league->class; ?>_league_ranking_preview">
+                <div class="ranking_players">
+                    <h4>Žebříček hráčů</h4>
+                    <table>
+                        <tbody>
+                        <?php foreach($league->getPlayers(3) as $player) {?>
+                        <tr>
+                            <td>
+                                <?php echo $player ?>
+                            </td>
+                            <td>
+                                <?php echo $player->rank?>
+                            </td>
+                        </tr>
+                        <?php }?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ranking_clubs">
+                    <h4>Žebříček klubů</h4>
+                    <table>
+                        <tbody>
+                        <?php foreach($league->getClubs(3) as $club) {?>
+                        <tr>
+                            <td>
+                                <?php echo $club ?>
+                            </td>
+                            <td>
+                                <?php echo $club->rank?>
+                            </td>
+                        </tr>
+                        <?php }?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <?php $i++; }?>
+        </div>
+        </section>
     </div>
-    <div class="ranking_clubs">
-        <h4>Žebříček klubů</h4>
-        <table>
-            <tbody>
-            <?php foreach($league->getClubs(3) as $club) {?>
-            <tr>
-                <td>
-                    <?php echo $club ?>
-                </td>
-                <td>
-                    <?php echo $club->rank?>
-                </td>
-            </tr>
-            <?php }?>
-            </tbody>
-        </table>
-    </div>
-</div>
-<?php }?>
-</section>
