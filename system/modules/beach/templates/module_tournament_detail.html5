@@ -30,8 +30,10 @@
             <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_tournament_results">
                 <table>
                     <tbody>
-                    <?php foreach($league->getTeams($this->tournament) as $team) {?>
-                    <tr>
+
+                    <?php $teams = $league->getTeams($this->tournament); $teamCount = count($teams); $j = 1; ?>
+                    <?php foreach($teams as $team) {?>
+                    <tr class="<?php echo $j == $teamCount ? 'last' : null ?>" >
                         <td>
                             <?php echo $team->rank?>
                         </td>
@@ -45,7 +47,7 @@
                             <?php echo $team->getRelated('club')->name?>
                         </td>
                     </tr>
-                    <?php }?>
+                    <?php $j++; }?>
                     </tbody>
                 </table>
             </div>
@@ -70,8 +72,9 @@
             <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?>" id="<?php echo $league->class; ?>_tournament_teams">
                 <table>
                     <tbody>
-                    <?php foreach($league->getTeams($this->tournament) as $team) {?>
-                    <tr>
+                    <?php $teams = $league->getTeams($this->tournament); $teamCount = count($teams); $j = 1; ?>
+                    <?php foreach($teams as $team) {?>
+                    <tr class="<?php echo $j == $teamCount ? 'last' : null ?>" >
                         <td>
                             <?php echo $team->getRelated('player'); ?>
                         </td>
@@ -82,7 +85,7 @@
                             <?php echo $team->getRelated('club')->name?>
                         </td>
                     </tr>
-                    <?php }?>
+                    <?php $j++; }?>
                     </tbody>
                 </table>
             </div>

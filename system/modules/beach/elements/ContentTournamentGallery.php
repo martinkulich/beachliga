@@ -44,8 +44,8 @@ class ContentTournamentGallery extends \ContentGallery
         $this->perRow = 3;
         $this->fullsize = true;
         $this->size = serialize(array(
-            200,
-            150,
+            260,
+            160,
             'center_center',
         ));
         $this->imagemargin = serialize(array(
