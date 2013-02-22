@@ -41,11 +41,13 @@
 }
 .nav > li > a {
   display: block;
+  text-decoration: none;
+  font-weight: bold;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  /*background-color: #eeeeee;*/
 }
 .nav > li > a > img {
   max-width: none;
@@ -128,15 +130,19 @@
   line-height: 14px;
 }
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;*/
 }
+.nav-tabs {
+  border-bottom: 2px solid #ceaa01;
+}
+
 .nav-tabs > li {
   margin-bottom: -1px;
 }
 .nav-tabs > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
-  line-height: 20px;
+  line-height: 20px;  
   border: 1px solid transparent;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
@@ -144,17 +150,50 @@
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
-  border-color: #eeeeee #eeeeee #dddddd;
+  /*border-color: #eeeeee #eeeeee #dddddd;*/
 }
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
-  color: #555555;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #fff;
+  /*border: 1px solid #ddd;*/
   border-bottom-color: transparent;
   cursor: default;
 }
+
+.nav-tabs > .tab1 > a, .nav-tabs > .tab1 > a:focus {
+    background-color: #ceaa01;
+    border: 2px solid #ceaa01;
+  }
+.nav-tabs > .tab2 > a, .nav-tabs > .tab2 > a:focus {
+    background-color: #e40d0d;
+    border: 2px solid #e40d0d;
+  }  
+.nav-tabs > .tab3 > a, .nav-tabs > .tab3 > a:focus {
+    background-color: #088407;
+    border: 2px solid #088407;
+  }
+.nav-tabs > .tab4 > a, .nav-tabs > .tab4 > a:focus {
+    background-color: #163fa9;
+    border: 2px solid #163fa9;
+  }
+
+.nav-tabs > .tab1 > a:hover {
+    background-color: #bd9b00;
+  }
+.nav-tabs > .tab2 > a:hover {
+    background-color: #c90000;
+  }  
+.nav-tabs > .tab3 > a:hover {
+    background-color: #007200;
+  }
+.nav-tabs > .tab4 > a:hover {
+    background-color: #00379e;
+  }
+
 .nav-pills > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -272,6 +311,7 @@
 .tabbable {
   *zoom: 1;
 }
+
 .tabbable:before,
 .tabbable:after {
   display: table;

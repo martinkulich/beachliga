@@ -11,7 +11,7 @@
 
 	body
 	{
-		background: #fae0af;
+		background: #d5effc;
 		/*color: #979797;*/color: #fff;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 10pt;
@@ -550,4 +550,23 @@
 		text-align: center;
 		border-top: solid 1px #1e272b;
 		color: #272f33;
+	}
+
+/*********************************************************************************/
+/* Table                                                                     		 */
+/*********************************************************************************/
+	
+	table 
+	{
+		width: 100%;
+	}
+
+	tr
+	{
+		border-bottom: 1px solid #3d342e;
+	}
+
+	td
+	{
+		width: 33%;
 	}

@@ -3,7 +3,7 @@
     <div class="tabbable"> <!-- Only required for left/right tabs -->
         <ul class="nav nav-tabs">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <li class="<?php echo $i == 1 ? 'active' : null ?>">
+            <li class="<?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'tab1' : 'tab'.$i ?>">
                 <a href="{{page::alias}}.html#<?php echo $league->class; ?>_league_rules" data-toggle="tab"><?php echo $league->
                     age_category; ?></a>
             </li>
