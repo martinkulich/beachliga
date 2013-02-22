@@ -30,6 +30,20 @@
 			padding-left: 0;
 		}
 
+	ul.style3 li {
+	    border-top: 2px solid rgb(113, 96, 70);
+	}
+
+	#footer-wrapper ul.contact li
+	{
+		border-top: solid 2px #716046;
+	}
+	
+	ul.contact li
+	{
+		border-top: solid 2px #e67d64;		
+	}
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
@@ -42,4 +56,9 @@
 	.homepage #main-wrapper
 	{
 		padding: 0 0 8em 0;
+	}
+
+	#footer-wrapper
+	{
+		background: url('../images/footer.jpg') bottom center no-repeat;
 	}

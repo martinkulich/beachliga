@@ -602,7 +602,7 @@
 	}
 	.ranking_header
 	{
-		background-color: rgba(53, 43, 35,0.95);
+		background-color: rgba(53, 43, 35,0.9);
 	}
 	tr.last 
 	{
@@ -633,4 +633,14 @@
 		.tournament_results table td.club
 	{
 		width: 40%;
+	}
+
+/*********************************************************************************/
+/* Gallery                                                                     	 */
+/*********************************************************************************/
+
+	.gallery > li
+	{
+		display: inline-table;
+		width: 260px;
 	}
