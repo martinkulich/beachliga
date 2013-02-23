@@ -84,16 +84,6 @@ $GLOBALS['TL_DCA']['tournament'] = array
         (
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
-        'teams' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['tournament']['teams'],
-            'exclude'                 => true,
-            'inputType'               => 'checkbox',
-            'foreignKey'              => 'team.id',
-            'eval'                    => array('mandatory'=>false, 'multiple'=>true),
-            'sql'                     => "blob NULL",
-            'relation'                => array('type'=>'hasMany', 'load'=>'lazy')
-        ),
         'date' => array
         (
             'label' => &$GLOBALS['TL_LANG']['tournament']['date'],
@@ -141,7 +131,6 @@ $GLOBALS['TL_DCA']['tournament'] = array
         'gallery' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tournament']['gallery'],
-            'exclude'                 => true,
             'inputType'               => 'fileTree',
             'eval'                    => array('multiple'=>true, 'fieldType'=>'checkbox', 'files'=>true, 'mandatory'=>false),
             'sql'                     => "blob NULL"
@@ -149,7 +138,6 @@ $GLOBALS['TL_DCA']['tournament'] = array
         'preview' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tournament']['preview'],
-            'exclude'                 => true,
             'inputType'               => 'fileTree',
             'eval'                    => array('fieldType'=>'radio', 'filesOnly'=>true, 'mandatory'=>false),
             'sql'                     => "varchar(255) NOT NULL default ''"
