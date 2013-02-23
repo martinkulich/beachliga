@@ -1,18 +1,17 @@
-
 <?php if($this->tournament) {?>
 <article class="box box-post">
     <header>
-        <h2>Příští turnaj</h2>
+        <h2><a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id?>" >Příští turnaj</a></h2>
         <span class="byline">
-            <?php echo $this->tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
-            <?php echo $this->tournament->getRelated('club')->name ?>
+            <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id?>" >
+                <?php echo $this->tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
+                <?php echo $this->tournament->getRelated('club')->name ?>
+            </a>
         </span>
     </header>
-    <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id?>" class="image image-left"><img src="<?php echo $this->tournament->getPreviewImage(135, 145, 'center_center'); ?>" alt=""/></a>
+    <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id?>" class="image image-left"><img
+            src="<?php echo $this->tournament->getPreviewImage(135, 145, 'center_center'); ?>" alt=""/></a>
 
     <p><?php echo $this->tournament->perex; ?></p>
-    <footer>
-        <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id?>" class="button button-speech">Přihlásit se</a>
-    </footer>
 </article>
 <?php } ?>
