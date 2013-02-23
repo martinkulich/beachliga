@@ -22,7 +22,7 @@
 	a
 	{
 		color: #fff;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 	
 	strong
@@ -153,7 +153,7 @@
 
 			.box-style1 ul.style2 li
 			{
-				border-top-color: #de6269;
+				border-top-color: #e67d64;
 			}
 
 			.box-style2 ul.style2 li
@@ -465,7 +465,7 @@
 			}					
 			.box-style2 .tab-pane
 			{
-				min-height: 327px;
+				min-height: 326px;
 			}
 
 		.box-main
@@ -602,7 +602,8 @@
 	}
 	.ranking_header
 	{
-		background-color: rgba(53, 43, 35,0.9);
+		/*background-color: rgba(53, 43, 35,0.9);*/
+        font-weight: bolder;
 	}
 	tr.last 
 	{
@@ -639,11 +640,10 @@
 /* Gallery                                                                     	 */
 /*********************************************************************************/
 
-	.gallery > li
-	{
-		display: inline-table;
-		width: 260px;
-	}
+img.gallery_image
+{
+    border-radius: 4px;
+}
 
 	#mbImage img
 	{

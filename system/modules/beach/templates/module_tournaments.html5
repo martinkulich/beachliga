@@ -1,33 +1,38 @@
 <?php if(count($this->futureTournaments)>0) { ?>
 <article class="box box-main">
     <h2>Plánované turnaje</h2>
-    <ul>
-
-        <?php foreach($this->futureTournaments as $tournament) {?>
-        <li>
-            <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id?>" >
-            <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
-            <?php echo $tournament->getRelated('club')->name ?>
-            </a>
-        </li>
-        <?php }?>
-    </ul>
+    <table>
+        <?php $tournamentsCount = count($this->futureTournaments); ?>
+        <?php $i = 1; foreach($this->futureTournaments as $tournament) {?>
+        <tr class="<?php echo $tournamentsCount == $i ? 'last' : null; ?>">
+            <td>
+                <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id?>">
+                    <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
+                    <?php echo $tournament->getRelated('club')->name ?>
+                </a>
+            </td>
+        </tr>
+        <?php $i++; }?>
+    </table>
 </article>
 <?php }?>
 
 <?php if(count($this->pastTournaments)>0) { ?>
 <article class="box">
     <h2>Odehrané turnaje</h2>
-    <ul>
-        <?php foreach($this->pastTournaments as $tournament) {?>
-        <li>
-            <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id ?>" >
-            <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
-            <?php echo $tournament->getRelated('club')->name ?>
-            </a>
-        </li>
-        <?php }?>
-    </ul>
+    <table>
+        <?php $tournamentsCount = count($this->pastTournaments); ?>
+        <?php $i = 1; foreach($this->pastTournaments as $tournament) {?>
+        <tr class="<?php echo $tournamentsCount == $i ? 'last' : null; ?>">
+            <td>
+                <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id?>">
+                    <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>&nbsp;|
+                    <?php echo $tournament->getRelated('club')->name ?>
+                </a>
+            </td>
+        </tr>
+        <?php $i++; }?>
+    </table>
 </article>
 <?php }?>
 &nbsp;

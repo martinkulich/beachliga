@@ -1,15 +1,15 @@
-
-    <div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
-        <ul class="nav nav-tabs side-tabs">
-            <?php $i = 1; foreach($this->leagues as $league) {?>
-            <li class="<?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'tab1' : 'tab'.$i ?>">
-                <a href="{{page::alias}}.html#<?php echo $league->class; ?>_league_ranking_preview" data-toggle="tab"><?php echo $league->
-                    age_category; ?></a>
-            </li>
-            <?php $i++; }?>
-        </ul>
-        <section class="box box-style2">
-        <div class="tab-content league_ranking_preview">
+<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
+    <ul class="nav nav-tabs side-tabs">
+        <?php $i = 1; foreach($this->leagues as $league) {?>
+        <li class="<?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'tab1' : 'tab'.$i ?>">
+            <a href="{{page::alias}}.html#<?php echo $league->class; ?>_league_ranking_preview"
+               data-toggle="tab"><?php echo $league->
+                age_category; ?></a>
+        </li>
+        <?php $i++; }?>
+    </ul>
+    <section class="box box-style2 league_ranking_preview">
+        <div class="tab-content">
             <?php $i = 1; foreach($this->leagues as $league) {?>
             <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>"
                  id="<?php echo $league->class; ?>_league_ranking_preview">
@@ -17,8 +17,9 @@
                     <h4>Žebříček hráčů</h4>
                     <table>
                         <tbody>
-                        <?php foreach($league->getPlayers(3) as $player) {?>
-                        <tr>
+                        <?php $players = $league->getPlayers(3); $playersCount = count($players); ?>
+                        <?php $i=1; foreach($players as $player) {?>
+                        <tr class="<?php echo $playersCount == $i ? 'last' : null; ?>">
                             <td class="ranking-preview_1">
                                 <?php echo $player ?>
                             </td>
@@ -26,7 +27,7 @@
                                 <?php echo $player->rank?>
                             </td>
                         </tr>
-                        <?php }?>
+                        <?php $i++; }?>
                         </tbody>
                     </table>
                 </div>
@@ -34,8 +35,9 @@
                     <h4>Žebříček klubů</h4>
                     <table>
                         <tbody>
-                        <?php foreach($league->getClubs(3) as $club) {?>
-                        <tr>
+                        <?php $clubs = $league->getClubs(3); $clubsCount = count($clubs); ?>
+                        <?php $i = 1; foreach($clubs as $club) {?>
+                        <tr class="<?php echo $clubsCount == $i ? 'last' : null; ?>">
                             <td class="ranking-preview_1">
                                 <?php echo $club ?>
                             </td>
@@ -43,12 +45,12 @@
                                 <?php echo $club->rank?>
                             </td>
                         </tr>
-                        <?php }?>
+                        <?php $i++; }?>
                         </tbody>
                     </table>
                 </div>
             </div>
             <?php $i++; }?>
         </div>
-        </section>
-    </div>
+    </section>
+</div>

@@ -139,12 +139,13 @@
 .nav-tabs > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
-  line-height: 20px;  
+  line-height: 8px;
   border: 1px solid transparent;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
+
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
   /*border-color: #eeeeee #eeeeee #dddddd;*/
@@ -155,7 +156,7 @@
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  background-color: #fff;
+  /*background-color: #fff;*/
   /*border: 1px solid #ddd;*/
   border-bottom-color: transparent;
   cursor: default;
@@ -179,17 +180,17 @@
   }
 
 .nav-tabs > .tab1 > a:hover {
-    background-color: #bd9b00;
+    /*background-color: #bd9b00;*/
   }
-.nav-tabs > .tab2 > a:hover {
-    background-color: #c90000;
-  }  
-.nav-tabs > .tab3 > a:hover {
-    background-color: #007200;
-  }
-.nav-tabs > .tab4 > a:hover {
-    background-color: #00379e;
-  }
+/*.nav-tabs > .tab2 > a:hover {*/
+    /*background-color: #c90000;*/
+  /*}  */
+/*.nav-tabs > .tab3 > a:hover {*/
+    /*background-color: #007200;*/
+  /*}*/
+/*.nav-tabs > .tab4 > a:hover {*/
+    /*background-color: #00379e;*/
+  /*}*/
 
 .nav-pills > li > a {
   padding-top: 8px;
@@ -334,22 +335,19 @@
 .tab-content > .tab-pane 
 {
   padding: 1.5em 1.5em 0.1em 1.5em;
+  border-radius: 0px 4px 4px 4px;
 }
 .tab-content > .tab-pane.yellow {
-  border: 3px solid #ceaa01;
-  border-radius: 4px;
+    border: 3px solid #ceaa01;
 }
 .tab-content > .tab-pane.red {
   border: 3px solid #e40d0d;
-  border-radius: 4px;
 }
 .tab-content > .tab-pane.green {
   border: 3px solid #088407;
-  border-radius: 4px;
 }
 .tab-content > .tab-pane.blue {
   border: 3px solid #163fa9;
-  border-radius: 4px;
 }
 
 .tab-content > .active,
@@ -418,17 +416,30 @@
   margin-left: 0;
 } 
 .tabs-right > .side-tabs > li{
-  width: 45px;
+  width: 29px;
 }
 .tabs-right > .side-tabs > li > a{
-  min-width: 45px;
+  min-width: 29px;
+  line-height: 20px;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+  padding-left: 4px;
+  padding-right: 4px;
 }
+.league_ranking_preview
+{
+    border-radius: 6px 0px 0px 6px;
+}
+
+.league_ranking_preview > .tab-content > .tab-pane
+{
+    border-radius: 4px 0px 0px 4px;
+}
+
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
   /*border-color: #eeeeee #eeeeee #eeeeee #dddddd;*/
