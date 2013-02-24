@@ -14,7 +14,7 @@
 
     <p><?php echo $this->tournament->perex; ?></p>
     <footer>
-        <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id?>" class="button button-folder ">Detail turnaje</a>
+        <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id?>" class="bigbutton bigbutton-style1">Detail turnaje</a>
     </footer>
 </article>
 <?php } ?>
