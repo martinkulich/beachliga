@@ -11,7 +11,7 @@
 
 	body
 	{
-		background: #d5effc;
+		background: #d5edf7;		
 		/*color: #979797;*/color: #fff;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 10pt;
@@ -529,7 +529,7 @@
 		background: rgba(10,10,10,0.6);
 
 	}
-	#wrapper {background: url('../images/main2.jpg') bottom center no-repeat;}
+	#wrapper {background: url('../images/main2.jpg') bottom center no-repeat fixed;}
 
 /*********************************************************************************/
 /* Banner                                                                        */
