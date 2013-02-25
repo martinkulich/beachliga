@@ -21,7 +21,7 @@
                         <?php foreach($this->tournaments as $tournament) {?>
                         <td class="ranking_other">
                             <a href="{{link_url::tournament-detail}}?id=<?php echo $tournament->id?>">
-                                <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormat']) ?>
+                                <?php echo $tournament->date->format($GLOBALS['TL_CONFIG']['dateFormatShort']) ?>
                             </a>
                         </td>
                         <?php }?>

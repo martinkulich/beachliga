@@ -76,6 +76,7 @@ $GLOBALS['TL_CONFIG']['websitePath']    = null;
 $GLOBALS['TL_CONFIG']['timeZone']    = 'GMT';
 $GLOBALS['TL_CONFIG']['datimFormat'] = 'd.m.Y H:i';
 $GLOBALS['TL_CONFIG']['dateFormat']  = 'd.m.Y';
+$GLOBALS['TL_CONFIG']['dateFormatShort']  = 'd.m.y';
 $GLOBALS['TL_CONFIG']['timeFormat']  = 'H:i';
 
 
