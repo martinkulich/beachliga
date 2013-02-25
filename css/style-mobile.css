@@ -220,7 +220,7 @@
 /* tabs - table                                                                  */
 /*********************************************************************************/
   
-  .tab-content > .tab-pane.active {
+  .box-main .tab-content > .tab-pane.active {
     display: inline-table !important;
   }
 
@@ -235,6 +235,14 @@
 	{
 		display: block !important;
 		width: 170px !important;
+	}
+
+	.box-style2 .tab-content > .tab-pane.active {
+		display: block;
+	}
+
+	.box-style2 .ranking_players {
+		margin-top: 1em !important;
 	}
 
 
