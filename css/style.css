@@ -11,7 +11,7 @@
 
 	body
 	{
-		background: #d5edf7;		
+		background: #d4f0fe;
 		/*color: #979797;*/color: #fff;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 10pt;
@@ -529,7 +529,7 @@
 		background: rgba(10,10,10,0.6);
 
 	}
-	#wrapper {background: url('../images/main2.jpg') bottom center no-repeat fixed;}
+	#wrapper {background: url('../images/main2.jpg') bottom center no-repeat;}
 
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -608,7 +608,7 @@
 	.ranking_header
 	{
 		/*background-color: rgba(53, 43, 35,0.9);*/
-        font-weight: bolder;
+    font-weight: bolder;
 	}
 	tr.last 
 	{
