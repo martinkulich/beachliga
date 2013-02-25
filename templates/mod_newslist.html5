@@ -7,4 +7,6 @@
         </li>
         <?php }?>
     </ul>
+    <a href="{{link_url::news-archive}}" class="button button-folder">Archiv novinek</a>
+
 </section>

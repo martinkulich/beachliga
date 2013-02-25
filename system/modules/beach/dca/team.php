@@ -199,7 +199,7 @@ class team extends Backend
             $coplayer->lastname,
             $coplayer->firstname,
             $club->name,
-            $league->name
+            $league->age_category
         );
     }
 

@@ -42,7 +42,7 @@
         <?php } ?>
         <?php if($this->club->web){ ?>
         <li class="url">
-            <a href="<?php echo $this->club->web ?>" target="_blank"><?php echo $this->club->web ?></a>
+            <a href="<?php echo $this->club->web ?>" target="_blank"><?php echo str_replace("http://", "", $this->club->web) ?></a>
         </li>
         <?php } ?>
     </ul>

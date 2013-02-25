@@ -28,6 +28,7 @@ $GLOBALS['TL_DCA']['player'] = array
 			'fields'                  => array('lastname', 'firstname'),
 			'flag'                    => 1,
             'disableGrouping'         =>true,
+            'panelLayout'=>'sort, search',
 		),
 		'label' => array
 		(
@@ -79,6 +80,9 @@ $GLOBALS['TL_DCA']['player'] = array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['player']['firstname'],
 			'inputType'               => 'text',
+            'search'                  => true,
+            'filter'                  => true,
+            'sorting'                  => true,
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>64),
 			'sql'                     => "varchar(64) NOT NULL default ''"
 		),
@@ -86,6 +90,9 @@ $GLOBALS['TL_DCA']['player'] = array
         (
             'label'                   => &$GLOBALS['TL_LANG']['player']['lastname'],
             'inputType'               => 'text',
+            'search'                  => true,
+            'filter'                  => true,
+            'sorting'                  => true,
             'eval'                    => array('mandatory'=>true, 'maxlength'=>64),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),

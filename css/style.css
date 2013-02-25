@@ -340,6 +340,11 @@
 			{
 				background-position: -24px 0px;
 			}
+        .button-style3
+        {
+            background: #1e120a;
+            background: rgba(30, 18, 10, 0.95);
+        }
 
 	.bigbutton
 	{
