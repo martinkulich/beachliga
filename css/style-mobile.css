@@ -26,6 +26,10 @@
 		clear: both;
 	}
 
+	.box-style2 {
+		clear: none;
+	}
+
 	.image
 	{
 		display: block;
@@ -49,6 +53,10 @@
 	{
 		padding: 2em 10px 2em 10px;
 		margin: 0 0 10px 0;
+	}
+
+	.tabbable .box {
+		padding: 0 0;
 	}
 
 	.button,
