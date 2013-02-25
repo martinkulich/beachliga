@@ -13,6 +13,10 @@
 		padding: 2em 1.5em 2em 1.5em;
 	}
 
+	.tabbable .box {
+		padding: 0 0;
+	}
+
 	.box-cta
 	{
 	}
