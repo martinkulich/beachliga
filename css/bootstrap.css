@@ -36,7 +36,7 @@
 }
 .nav {
   margin-left: 0;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   list-style: none;
 }
 .nav > li > a {
@@ -308,7 +308,7 @@
 }
 .tab-content {
   overflow: auto;
-  margin-top: -1.4em;
+  margin-top: -19px;
 }
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
