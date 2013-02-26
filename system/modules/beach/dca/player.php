@@ -60,7 +60,7 @@ $GLOBALS['TL_DCA']['player'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                     => 'firstname, lastname; birthday',
+		'default'                     => 'firstname, lastname; birthday; {contacts}, phone, email',
 	),
 
 
