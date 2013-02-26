@@ -103,6 +103,20 @@ $GLOBALS['TL_DCA']['player'] = array
             'eval'                    => array('rgxp'=>'date', 'mandatory'=>true, 'doNotCopy'=>true, 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
             'sql'                     => "int(10) unsigned NULL"
         ),
+        'phone' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['player']['phone'],
+            'inputType'               => 'text',
+            'eval'                    => array( 'maxlength'=>64),
+            'sql'                     => "varchar(64) NOT NULL default ''"
+        ),
+        'email' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['player']['email'],
+            'inputType'               => 'text',
+            'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'rgxp'=>'email'),
+            'sql'                     => "varchar(64) NOT NULL default ''"
+        ),
 	)
 );
 

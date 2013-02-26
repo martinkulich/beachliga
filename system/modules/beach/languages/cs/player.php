@@ -8,6 +8,12 @@ $GLOBALS['TL_LANG']['player']['birthday'][0] = 'Datum narození';
 $GLOBALS['TL_LANG']['player']['birthday'][1] = 'Prosím zadejte datum narození hráče.';
 
 
+$GLOBALS['TL_LANG']['player']['contacts'] = 'Kontakty';
+$GLOBALS['TL_LANG']['player']['phone'][0] = 'Telefon';
+$GLOBALS['TL_LANG']['player']['phone'][1] = 'Prosím zadejte telefon.';
+$GLOBALS['TL_LANG']['player']['email'][0] = 'Email';
+$GLOBALS['TL_LANG']['player']['email'][1] = 'Prosím zadejte email.';
+
 $GLOBALS['TL_LANG']['player']['new'][0] = 'Nový hráč';
 $GLOBALS['TL_LANG']['player']['new'][1] = 'Nový hráč';
 $GLOBALS['TL_LANG']['player']['show'][0] = 'Zobrazit podrobnosti';
