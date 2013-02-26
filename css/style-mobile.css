@@ -26,6 +26,10 @@
 		clear: both;
 	}
 
+	.box-style2 {
+		clear: none;
+	}
+
 	.image
 	{
 		display: block;
@@ -49,6 +53,10 @@
 	{
 		padding: 2em 10px 2em 10px;
 		margin: 0 0 10px 0;
+	}
+
+	.tabbable .box {
+		padding: 0 0;
 	}
 
 	.button,
@@ -134,7 +142,7 @@
 		height: 140px;
 		background-size: auto 180px;
 		background-position: bottom center;
-		display: none;
+		/*display: none;*/
 	}
 	
 	.homepage #header-wrapper
@@ -162,17 +170,81 @@
 
 	#header
 	{
-		display: none;
+	}
+
+	#header h1 {
+		background: rgba(30, 18, 10, 0.6);
+		display: block;
+		line-height: 30px;
+		padding-left: 10px;
 	}
 
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
 
-	#nav
-	{
-		display: none;
+	#nav {
+		margin-top: 5.3em;
+		text-align: center;
 	}
+	#nav ul {
+		line-height: 40px;
+		background: rgba(30, 18, 10, 0.95);
+	}
+	#nav ul li {
+		display: inline-table;
+		margin: 0 4px;
+	}
+	#nav ul li a {
+		display: block;
+		padding: 0 7px;
+	}
+	#nav ul li.current_page_item a, #nav ul li.active a {
+		background: #0e0803;
+	}
+
+/*********************************************************************************/
+/* Nav tabs                                                                      */
+/*********************************************************************************/
+
+	.nav-tabs {
+		display: inline-table !important;
+	}
+
+	.nav-tabs > li > a, .nav-pills > li > a {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+	}
+
+/*********************************************************************************/
+/* tabs - table                                                                  */
+/*********************************************************************************/
+  
+  .box-main .tab-content > .tab-pane.active {
+    display: inline-table !important;
+  }
+
+  .tab-content > .tab-pane {
+    padding: 0 0.5em !important;
+	}
+
+	td {
+		padding-right: 7px;
+	}
+	.ranking_player
+	{
+		display: block !important;
+		width: 170px !important;
+	}
+
+	.box-style2 .tab-content > .tab-pane.active {
+		display: block;
+	}
+
+	.box-style2 .ranking_players {
+		margin-top: 1em !important;
+	}
+
 
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -182,7 +254,8 @@
 	{
 		background: rgba(0,0,0,0.6);
 		position: absolute;
-		bottom: 0;
+		bottom: 2.95em;
+		top: 30px;
 		left: 0;
 		width: 100%;
 		padding: 12px 20px 12px 20px;
