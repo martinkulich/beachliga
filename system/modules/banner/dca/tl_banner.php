@@ -42,7 +42,10 @@ class tl_banner extends Backend
 	        //Interne Banner Grafik
 	        $BannerSourceIntern = true;
 	        $oriSize = false;
-    	    $arrImageSize = @getimagesize(TL_ROOT . '/' . $row['banner_image']);
+            $imageFile = FilesModel::findByPk($row['banner_image']);
+            $row['banner_image'] = $imageFile->path;
+    	    $arrImageSize = getimagesize(TL_ROOT . '/' . $row['banner_image']);
+
     	    if ($arrImageSize===false) {
     	    	//Workaround fuer PHP ohne zlib bei SWC Files
     	    	$arrImageSize = $this->getimagesizecompressed(TL_ROOT . '/' . $row['banner_image']);
