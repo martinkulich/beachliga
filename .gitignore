@@ -1,4 +1,5 @@
 assets/css/*
+assets/images/*
 assets/js/*
 system/cache/*
 system/logs/*
@@ -6,6 +7,7 @@ system/tmp/*
 system/config/localconfig.php
 .idea
 .idea/*
-
-*/.DS_Store
+files/*
+*.DS_Store
+*.htaccess
 system/cron/cron.txt
