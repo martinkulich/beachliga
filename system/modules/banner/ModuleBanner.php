@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 /**
  * Contao Open Source CMS, Copyright (C) 2005-2013 Leo Feyer
  *
@@ -11,7 +11,7 @@
  * @filesource
  */
 
-
+namespace Contao;
 /**
  * Class ModuleBanner
  *
@@ -78,7 +78,7 @@ class ModuleBanner extends Module
 	{
 		if (TL_MODE == 'BE')
 		{
-			$objTemplate = new BackendTemplate('be_wildcard');
+				$objTemplate = new BackendTemplate('be_wildcard');
 			$objTemplate->wildcard = '### BANNER MODUL ###';
 			$objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
@@ -108,8 +108,6 @@ class ModuleBanner extends Module
 	 */
 	protected function compile()
 	{
-		require_once(TL_ROOT . '/system/modules/banner/ModuleBannerVersion.php');
-		
 		//alte und neue Art gemeinsam zum Array bringen
 		if (strpos($this->banner_categories,':') !== false) 
 		{
@@ -124,7 +122,7 @@ class ModuleBanner extends Module
 		    $this->log($GLOBALS['TL_LANG']['tl_banner']['banner_cat_not_found'], 'ModulBanner Compile', 'ERROR');
 			return;
 		}
-		
+
 		//FE Login Check / Filtering Categories
 		if ($this->BannerCheckFE()===false) 
 		{
@@ -174,8 +172,10 @@ class ModuleBanner extends Module
             $strSqlExcludeSeen = '';
             $this->Template->headline_stop = false;
         }
+
 		if ($intBALL !==1) 
 		{
+
 			/*
 			____ _ _  _ ____ _    ____    ___  ____ _  _ _  _ ____ ____ 
 			[__  | |\ | | __ |    |___    |__] |__| |\ | |\ | |___ |__/ 
@@ -232,6 +232,7 @@ class ModuleBanner extends Module
         			$maxloop++;
         			//log_message('BannerSingle Weighting LoopL '.$maxloop,'Banner.log');
     			} while ( ($intRows ==0) && ($maxloop<2));
+
     			$intPrioW2 = 0; // test for empty prio 2
     			$arrPrioW = array();
     		    while ($objBanners1->next()) 
@@ -274,7 +275,7 @@ class ModuleBanner extends Module
     	        {
     	            $intWeighting=0;
     	        }
-    			
+
     		    // Banner suchen...
     	        $intRandomBlocker = " AND TLB.id !=" .$this->BannerGetRandomBlocker();
     	        $maxloop =0;
@@ -335,7 +336,7 @@ class ModuleBanner extends Module
         	    		//log_message('BannerSingle BannerLimit Loop '.$maxloop,'Banner.log');
     			    } while ( ($intRows ==0) && ($maxloop<2));
     			}
-		    } // else no firstview		
+		    } // else no firstview
 		} 
 		else 
 		{
@@ -427,6 +428,8 @@ class ModuleBanner extends Module
 			    // 9 = JPC, 10 = JP2, 11 = JPX, 12 = JB2, 13 = SWC, 14 = IFF
 			    if ($objBanners->banner_type == 'banner_image') 
 			    {
+                    $imageFile = FilesModel::findByPk($objBanners->banner_image);
+                    $objBanners->banner_image = $imageFile->path;
 	    		    //Interne Banner Grafik
 	    		    $arrImageSize = @getimagesize(TL_ROOT . '/' . $objBanners->banner_image);
 	    		    if ($arrImageSize===false) 

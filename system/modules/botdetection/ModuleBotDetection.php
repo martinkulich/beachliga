@@ -1,5 +1,6 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
+namespace Contao;
 /**
  * Contao Open Source CMS
  * Copyright (C) 2005-2012 Leo Feyer

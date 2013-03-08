@@ -1,16 +1,6 @@
 <?php
-/**
- * Contao Open Source CMS, Copyright (C) 2005-2013 Leo Feyer
- * 
- * Modul Banner Referrer - Frontend
- *
- * @copyright	Glen Langer 2007..2013 <http://www.contao.glen-langer.de>
- * @author      Glen Langer (BugBuster)
- * @package     Banner
- * @license     GPL
- * @filesource
- */
 
+namespace Contao;
 
 /**
  * Class ModuleBannerReferrer

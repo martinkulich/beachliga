@@ -61,7 +61,7 @@ class ModuleBannerStat extends BackendModule
 	 */
 	protected function compile()
 	{
-		require_once(TL_ROOT . '/system/modules/banner/ModuleBannerVersion.php');
+        require_once(TL_ROOT . '/system/modules/banner/ModuleBannerVersion.php');
 		
 	    if ($this->intKatID == 0) 
 	    { //direkter Aufruf ohne ID
