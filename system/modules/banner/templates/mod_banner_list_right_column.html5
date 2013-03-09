@@ -5,10 +5,11 @@
 <?php endif; ?>
 <?php foreach ($this->banners as $banner): ?>
 <?php if ($banner['banner_pic']) : ?>
+    <h2 class="banner_name"><?php echo $banner['banner_name']; ?></h2>
     <div class="banner_image" id="banner_<?php echo $banner['banner_id']; ?>">
         <?php if ($banner['banner_url']): ?><a href="banner_clicks.php?<?php echo $banner['banner_key'].$banner['banner_id']; ?>" <?php echo $banner['banner_target']; ?> title="<?php echo $banner['banner_comment']; ?>" ><?php endif; ?><img src="<?php echo $banner['src']; ?>"<?php echo $banner['size']; ?> title="<?php echo $banner['banner_comment']; ?>" alt="<?php echo $banner['alt']; ?>"><?php if ($banner['banner_url']): ?></a><?php endif; ?>
     </div>
-    <div class="banner_name"><?php echo $banner['banner_name']; ?></div>
+
 <?php endif; ?>
 <?php if ($banner['banner_flash']) : ?>
     <div class="banner_flash block" style="height:<?php echo $banner['swf_height']; ?>px; width:<?php echo $banner['swf_width']; ?>px;">

@@ -12,6 +12,8 @@
  */
 
 namespace Contao;
+
+use \FilesModel;
 /**
  * Class ModuleBanner
  *
@@ -19,7 +21,7 @@ namespace Contao;
  * @author     Glen Langer 
  * @package    Banner
  */
-class ModuleBanner extends Module
+class ModuleBanner extends \Module
 {
 
 	/**
