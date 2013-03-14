@@ -20,14 +20,14 @@
     <div class="tabbable"> <!-- Only required for left/right tabs -->
         <ul class="nav nav-tabs">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <li class="<?php echo $i == 1 ? 'active' : null ?>  <?php echo $i == 1 ? 'tab1' : 'tab'.$i ?>">
+            <li class="<?php echo $i == 1 ? 'active' : null ?>  tab_<?php echo $league->class ?>">
                 <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id; ?>#<?php echo $league->class; ?>_tournament_results" data-toggle="tab"><?php echo $league->age_category; ?></a>
             </li>
             <?php $i++; }?>
         </ul>
         <div class="tab-content tournament_results">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>" id="<?php echo $league->class; ?>_tournament_results">
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $league->class; ?>" id="<?php echo $league->class; ?>_tournament_results">
                 <table>
                     <tbody>
 
@@ -62,14 +62,14 @@
     <div class="tabbable"> <!-- Only required for left/right tabs -->
         <ul class="nav nav-tabs">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <li class="<?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'tab1' : 'tab'.$i ?>">
+            <li class="<?php echo $i == 1 ? 'active' : null ?> tab_<?php echo $league->class ?>">
                 <a href="{{link_url::tournament-detail}}?id=<?php echo $this->tournament->id; ?>#<?php echo $league->class; ?>_tournament_teams" data-toggle="tab"><?php echo $league->age_category; ?></a>
             </li>
             <?php $i++; }?>
         </ul>
         <div class="tab-content tournament_teams">
             <?php $i = 1; foreach($this->leagues as $league) {?>
-            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>" id="<?php echo $league->class; ?>_tournament_teams">
+            <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $league->class ?>" id="<?php echo $league->class; ?>_tournament_teams">
                 <table>
                     <tbody>
                     <?php $teams = $league->getTeams($this->tournament); $teamCount = count($teams); $j = 1; ?>

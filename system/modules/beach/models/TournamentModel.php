@@ -99,6 +99,7 @@ class TournamentModel extends Model
 
             JOIN team t ON t.league = l.id
             where t.pid = '%s'
+            order by id asc
             )",
             $this->id
         );
