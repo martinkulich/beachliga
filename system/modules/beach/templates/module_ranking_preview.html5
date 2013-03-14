@@ -1,7 +1,7 @@
 <div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
     <ul class="nav nav-tabs side-tabs">
         <?php $i = 1; foreach($this->leagues as $league) {?>
-        <li class="<?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'tab1' : 'tab'.$i ?>">
+        <li class="<?php echo $i == 1 ? 'active' : null ?> tab_<?php echo $league->class ?>">
             <a href="{{page::alias}}.html#<?php echo $league->class; ?>_league_ranking_preview"
                data-toggle="tab"><?php echo $league->
                 age_category; ?></a>
@@ -14,7 +14,7 @@
             <div class="tab-pane <?php echo $i == 1 ? 'active' : null ?> <?php echo $i == 1 ? 'yellow' : $league->class ?>"
                  id="<?php echo $league->class; ?>_league_ranking_preview">
                 <div class="ranking_players">
-                    <h4>Žebříček hráčů</h4>
+                    <h4>Žebříček hráčů/hráček</h4>
                     <table>
                         <tbody>
                         <?php $players = $league->getPlayers(3); $playersCount = count($players); ?>

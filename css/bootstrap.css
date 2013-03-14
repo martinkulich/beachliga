@@ -162,19 +162,20 @@
   cursor: default;
 }
 
-.nav-tabs > .tab1 > a, .nav-tabs > .tab1 > a:focus {
+.nav-tabs > .tab_yellow > a, .nav-tabs > .tab_yellow > a:focus {
     background-color: #ceaa01;
     border: 2px solid #ceaa01;
   }
-.nav-tabs > .tab2 > a, .nav-tabs > .tab2 > a:focus {
+.nav-tabs > .tab_red > a, .nav-tabs > .tab_red > a:focus {
     background-color: #e40d0d;
     border: 2px solid #e40d0d;
   }  
-.nav-tabs > .tab3 > a, .nav-tabs > .tab3 > a:focus {
+.nav-tabs > .tab_green > a, .nav-tabs > .tab_green > a:focus {
     background-color: #088407;
     border: 2px solid #088407;
   }
-.nav-tabs > .tab4 > a, .nav-tabs > .tab4 > a:focus {
+.nav-tabs > .tab_blue_men > a, .nav-tabs > .tab_blue_men > a:focus,
+.nav-tabs > .tab_blue_women > a, .nav-tabs > .tab_blue_women > a:focus {
     background-color: #163fa9;
     border: 2px solid #163fa9;
   }
@@ -333,7 +334,8 @@
 .tab-content > .tab-pane.green {
   border: 3px solid #088407;
 }
-.tab-content > .tab-pane.blue {
+.tab-content > .tab-pane.blue_women,
+.tab-content > .tab-pane.blue_men {
   border: 3px solid #163fa9;
 }
 
@@ -416,6 +418,7 @@
   border-radius: 0 4px 4px 0;
   padding-left: 4px;
   padding-right: 4px;
+  text-align: center;
 }
 .league_ranking_preview
 {

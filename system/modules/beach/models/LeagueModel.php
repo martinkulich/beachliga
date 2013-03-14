@@ -29,6 +29,7 @@ class LeagueModel extends Model
 
     public static function findAll(array $arrOptions = array())
     {
+        $arrOptions['order'] = isset($arrOptions['order']) ? $arrOptions['order'] : 'id ASC';
         $objectCollection = parent::findAll($arrOptions);
         $objects = array();
         if ($objectCollection) {
