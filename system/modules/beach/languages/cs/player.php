@@ -14,6 +14,9 @@ $GLOBALS['TL_LANG']['player']['phone'][1] = 'Prosím zadejte telefon.';
 $GLOBALS['TL_LANG']['player']['email'][0] = 'Email';
 $GLOBALS['TL_LANG']['player']['email'][1] = 'Prosím zadejte email.';
 
+$GLOBALS['TL_LANG']['player']['club'][0] = 'Klub';
+$GLOBALS['TL_LANG']['player']['club'][1] = 'Prosím zadejte klub za který hráč hraje.';
+
 $GLOBALS['TL_LANG']['player']['new'][0] = 'Nový hráč';
 $GLOBALS['TL_LANG']['player']['new'][1] = 'Nový hráč';
 $GLOBALS['TL_LANG']['player']['show'][0] = 'Zobrazit podrobnosti';

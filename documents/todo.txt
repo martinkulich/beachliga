@@ -1,3 +1,14 @@
+zebricek klubu celkem ne po ligach
+dca
+    hrac
+        klub
+        email
+        registracka
+zobrazit tym u daneho hrace
+    nahled celkovych vysledku
+    celkove vysledky
+
+
 zebricky
     maly
     kompletni

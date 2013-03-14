@@ -32,8 +32,9 @@ $GLOBALS['TL_DCA']['player'] = array
 		),
 		'label' => array
 		(
-			'fields'                  => array('lastname', 'firstname'),
-			'format'                  => '%s %s',
+			'fields'                  => array('lastname', 'firstname', 'club'),
+			'format'                  => '%s %s %s',
+            'label_callback' => array('player', 'labelCallback')
 		),
 
 
@@ -60,7 +61,7 @@ $GLOBALS['TL_DCA']['player'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                     => 'firstname, lastname; birthday; {contacts}, phone, email',
+		'default'                     => 'firstname, lastname; birthday; {contacts}, phone, email; club',
 	),
 
 
@@ -117,7 +118,28 @@ $GLOBALS['TL_DCA']['player'] = array
             'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'rgxp'=>'email'),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
+        'club' => array
+        (
+            'label' => &$GLOBALS['TL_LANG']['player']['club'],
+            'inputType' => 'select',
+            'foreignKey' => 'club.name',
+            'eval' => array('mandatory' => true, 'chosen' => true, 'doNotCopy' => true, 'includeBlankOption' => true),
+            'sql' => "int(10) unsigned NOT NULL default '0'",
+            'relation' => array('type' => 'belongsTo', 'load' => 'eager')
+        ),
 	)
 );
+
+
+class player extends Backend
+{
+    public function labelCallback($row)
+    {
+        $club = ClubModel::findByPk($row['club']);
+        return sprintf('%s %s %s', $row['lastname'], $row['firstname'], $club->name);
+    }
+
+
+}
 
 
