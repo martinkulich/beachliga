@@ -99,10 +99,10 @@ class TournamentModel extends Model
 
             JOIN team t ON t.league = l.id
             where t.pid = '%s'
-            order by id asc
-            )",
+            ) order by id asc",
             $this->id
         );
+
         $objStatement = Database::getInstance()->prepare($query);
         $objResult = $objStatement->execute();
 
@@ -111,9 +111,8 @@ class TournamentModel extends Model
 
             $objResult = static::postFind($objResult);
             while ($league = $objResult->next()) {
-                $leagues[] = new LeagueModel($league);
+                $leagues[$league->id] = new LeagueModel($league);
             }
-
         }
 
         return $leagues;
