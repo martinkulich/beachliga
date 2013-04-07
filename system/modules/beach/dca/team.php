@@ -27,7 +27,7 @@ $GLOBALS['TL_DCA']['team'] = array
     (
         'sorting' => array
         (
-            'panelLayout'=>'filter, sort',
+            'panelLayout'=>'filter, sort, limit',
             'mode' => 4,
             'fields' => array('rank'),
             'headerFields' => array('date', 'club'),
