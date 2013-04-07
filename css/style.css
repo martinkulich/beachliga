@@ -658,3 +658,8 @@ img.gallery_image
 		-moz-border-radius:6px;
 		-webkit-border-radius:6px;
 	}
+
+#header img.logo
+{
+    padding-top: 0.25em;
+}
