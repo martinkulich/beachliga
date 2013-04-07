@@ -31,24 +31,24 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="ranking_clubs">
-                    <h4>Žebříček klubů</h4>
-                    <table>
-                        <tbody>
-                        <?php $clubs = $league->getClubs(3); $clubsCount = count($clubs); ?>
-                        <?php $i = 1; foreach($clubs as $club) {?>
-                        <tr class="<?php echo $clubsCount == $i ? 'last' : null; ?>">
-                            <td class="ranking-preview_1">
-                                <?php echo $club ?>
-                            </td>
-                            <td class="ranking-preview_2">
-                                <?php echo $club->rank?>
-                            </td>
-                        </tr>
-                        <?php $i++; }?>
-                        </tbody>
-                    </table>
-                </div>
+                <!--<div class="ranking_clubs">-->
+                    <!--<h4>Žebříček klubů</h4>-->
+                    <!--<table>-->
+                        <!--<tbody>-->
+                        <!--<?php $clubs = $league->getClubs(3); $clubsCount = count($clubs); ?>-->
+                        <!--<?php $i = 1; foreach($clubs as $club) {?>-->
+                        <!--<tr class="<?php echo $clubsCount == $i ? 'last' : null; ?>">-->
+                            <!--<td class="ranking-preview_1">-->
+                                <!--<?php echo $club ?>-->
+                            <!--</td>-->
+                            <!--<td class="ranking-preview_2">-->
+                                <!--<?php echo $club->rank?>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<?php $i++; }?>-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                <!--</div>-->
             </div>
             <?php $i++; }?>
         </div>
