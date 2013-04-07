@@ -53,7 +53,9 @@
                 <header id="header">
 
                     <!-- Logo -->
-                    <h1><a href="{{link_url::homepage}}" class="mobileUI-site-name">BEACHLIGA</a></h1>
+                    <h1><a href="{{link_url::homepage}}" class="mobileUI-site-name">
+                        <img class="logo" src="images/logo.png" alt="beachliga" />
+                    </a></h1>
 
                     <?php echo $this->header; ?>
 
