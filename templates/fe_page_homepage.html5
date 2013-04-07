@@ -62,13 +62,13 @@
                 </header>
 
                 <!-- Banner -->
-                <div id="banner">
-                    <div class="caption">
-                        <h2>Pražská <span>juniorliga</span></h2>
+                <!--<div id="banner">-->
+                    <!--<div class="caption">-->
+                        <!--<h2>Pražská <span>juniorliga</span></h2>-->
 
-                        <p>liga v plážovém volejbale</p>
-                    </div>
-                </div>
+                        <!--<p>liga v plážovém volejbale</p>-->
+                    <!--</div>-->
+                <!--</div>-->
 
             </div>
         </div>
