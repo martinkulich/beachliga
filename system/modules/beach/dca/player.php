@@ -28,7 +28,7 @@ $GLOBALS['TL_DCA']['player'] = array
 			'fields'                  => array('lastname', 'firstname'),
 			'flag'                    => 1,
             'disableGrouping'         =>true,
-            'panelLayout'=>'sort, search',
+            'panelLayout'=>'sort, search, limit',
 		),
 		'label' => array
 		(
@@ -37,6 +37,16 @@ $GLOBALS['TL_DCA']['player'] = array
             'label_callback' => array('player', 'labelCallback')
 		),
 
+        'global_operations' => array
+        (
+            'all' => array
+            (
+                'label' => &$GLOBALS['TL_LANG']['MSC']['all'],
+                'href' => 'act=select',
+                'class' => 'header_edit_all',
+                'attributes' => 'onclick="Backend.getScrollOffset()" accesskey="e"'
+            )
+        ),
 
 		'operations' => array
 		(
