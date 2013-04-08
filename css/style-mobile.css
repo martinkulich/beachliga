@@ -179,13 +179,16 @@
 		line-height: 30px;
 		padding-left: 10px;
 	}
+	#header img.logo {
+		width: 150px;
+	}
 
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
 
 	#nav {
-		margin-top: 5.3em;
+		margin-top: 2.7em;
 		text-align: center;
 	}
 	#nav ul {
@@ -343,4 +346,25 @@
 	#copyright
 	{
 		padding: 2em 20px 2em 20px;
+	}
+
+/*********************************************************************************/
+/* Mobile - width 240px                                                          */
+/*********************************************************************************/
+
+	@media only screen and (width: 240px) {
+		#nav ul li {
+			margin: 0 1px;
+			font-size: 10px;		
+		}
+		#nav {
+			margin-top: 3.4em;
+		}
+		#header img.logo {
+			width: 120px;
+		}
+		.button, .bigbutton {		
+			font-size: 0.8em !important;
+			padding-left: 1.4em !important;
+		}
 	}
