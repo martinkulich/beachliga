@@ -111,7 +111,7 @@ $GLOBALS['TL_DCA']['tournament'] = array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tournament']['perex'],
             'inputType'               => 'textarea',
-            'eval'                    => array('mandatory'=>false),
+            'eval'                    => array('mandatory'=>false, 'rte'=>'tinyMCE'),
             'sql'                     => "text NOT NULL default ''"
         ),
         'summary' => array
