@@ -118,14 +118,14 @@ $GLOBALS['TL_DCA']['tournament'] = array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tournament']['summary'],
             'inputType'               => 'textarea',
-            'eval'                    => array('mandatory'=>false),
+            'eval'                    => array('mandatory'=>false, 'rte'=>'tinyMCE'),
             'sql'                     => "text NOT NULL default ''"
         ),
         'descrip' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tournament']['descrip'],
             'inputType'               => 'textarea',
-            'eval'                    => array('mandatory'=>false),
+            'eval'                    => array('mandatory'=>false, 'rte'=>'tinyMCE'),
             'sql'                     => "text NOT NULL default ''"
         ),
         'gallery' => array
