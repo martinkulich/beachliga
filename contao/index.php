@@ -1,5 +1,5 @@
 <?php
-
+ini_set('max_file_uploads', 1000);
 /**
  * Contao Open Source CMS
  * 
