@@ -179,6 +179,12 @@
     background-color: #163fa9;
     border: 2px solid #163fa9;
   }
+  
+.nav-tabs > .tab_purple_men > a, .nav-tabs > .tab_purple_men > a:focus,
+.nav-tabs > .tab_purple_women > a, .nav-tabs > .tab_purple_women > a:focus {
+    background-color: #800080;
+    border: 2px solid #800080;
+  }
 
 .nav-pills > li > a {
   padding-top: 8px;
